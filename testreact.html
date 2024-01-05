@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Hackman's Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- React and ReactDOM JS -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root" class="container mt-5">
+        <h1 class="mb-4">Dr. Hackman's Profile</h1>
+
+        <!-- Corrected placement of React component -->
+        <script>
+            // React component
+            function AboutMe() {
+                return (
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">About Me</h5>
+                            <p className="card-text">
+                                I am Dr. Hackman, with a background in computer science. Passionate about data science, I aspire to make medical AI simple and accessible.
+                            </p>
+                        </div>
+                    </div>
+                );
+            }
+
+            // Render the component to the 'root' element
+            ReactDOM.render(<AboutMe />, document.getElementById('root'));
+        </script>
+
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
