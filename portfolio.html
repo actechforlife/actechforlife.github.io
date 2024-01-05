@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Hackman's Profile</title>
+    <title>Dr. Hackman's Portfolio</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
@@ -16,14 +16,15 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 
-    <!-- Import Layout and AboutMe components -->
+    <!-- Import Layout and Portfolio components -->
     <script type="text/babel" src="Layout.js"></script>
-    <script type="text/babel" src="aboutMe.js"></script>
+    <!-- Create a new component for the Portfolio page as needed -->
+    <script type="text/babel" src="portfolioComponent.js"></script>
 
     <!-- React components script -->
     <script type="text/babel">
-        // Render the AboutMe component within the Layout
-        ReactDOM.render(<AboutMe />, document.getElementById('root'));
+        // Render the Portfolio component within the Layout
+        ReactDOM.render(<PortfolioComponent />, document.getElementById('root'));
     </script>
 
     <!-- Bootstrap JS and Popper.js -->
