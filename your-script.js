@@ -10,7 +10,7 @@ new Vue({
     },
     computed: {
       fullName() {
-        return `${this.resume.Summary.fname} ${this.resume.Summary.lname}`;
+        return this.resume.Summary ? `${this.resume.Summary.fname} ${this.resume.Summary.lname}` : '';
       }
     },
     methods: {
