@@ -34,6 +34,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 
 <body>
@@ -94,6 +95,12 @@
         <p>
           Example inner page template
         </p>
+        <div id="app">
+          <ul>
+            <li v-for="skill in skills">{{ skill }}</li>
+          </ul>
+        </div>
+        
       </div>
     </section>
 
@@ -130,6 +137,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="your-script.js"></script>
 
 </body>
 
