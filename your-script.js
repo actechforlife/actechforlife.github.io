@@ -3,19 +3,23 @@
 new Vue({
     el: '#app',
     data: {
-      skills: []
+      resume: {}
     },
     mounted() {
-      this.loadSkills();
+      this.loadResume();
+    },
+    computed: {
+      fullName() {
+        return `${this.resume.Summary.fname} ${this.resume.Summary.lname}`;
+      }
     },
     methods: {
-      async loadSkills() {
+      async loadResume() {
         try {
-          const response = await fetch('listofskills.txt');
-          const data = await response.text();
-          this.skills = data.split('\n').filter(skill => skill.trim() !== '');
+          const response = await fetch('resume.json');
+          this.resume = await response.json();
         } catch (error) {
-          console.error('Error loading skills:', error);
+          console.error('Error loading resume:', error);
         }
       }
     }

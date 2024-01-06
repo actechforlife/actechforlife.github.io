@@ -1,106 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            font-size: 24px;
-            text-align: center;
-        }
-        h2 {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .contact {
-            display: flex;
-            justify-content: space-between;
-        }
-        .section {
-            border-bottom: 1px solid gray;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
-    <h1>Merrill</h1>
-    <div class="contact">
-        <div>
-            <p>Merrill@gmail.com</p>
-            <p>518 Lusche Lane,</p>
-            <p>Meggeton Kansas,</p>
-            <p>62537-3027</p>
-        </div>
-        <div>
-            <img src="merrill.jpg" alt="Merrill's photo" width="100" height="100">
-        </div>
-    </div>
-    <div class="section">
-        <h2>ACHIEVEMENTS</h2>
+
+  <div id="app">
+    <h1>{{ fullName }}</h1>
+    
+    <h2>Education</h2>
+    <ul>
+      <li v-for="edu in resume.Education">{{ edu.name }} - {{ edu.degree }}</li>
+    </ul>
+
+    <h2>Experience</h2>
+    <ul>
+      <li v-for="exp in resume.Experience">
+        <strong>{{ exp.position }}</strong> at {{ exp.company }} ({{ exp.duration }})
         <ul>
-            <li>National Society Cras enim ex / 2022</li>
-            <li>National Society Vestibulum ac justo / 2023</li>
+          <li v-for="responsibility in exp.responsibilities">{{ responsibility }}</li>
         </ul>
-    </div>
-    <div class="section">
-        <h2>TECHNICAL SKILLS</h2>
-        <ul>
-            <li>Computer - Math - Microsoft Office</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>ACTIVITIES</h2>
-        <ul>
-            <li>VELIT BIBENDUM HIGH SCHOOL TENNIS TEAM 2021 - Present</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>KEY SKILLS</h2>
-        <ul>
-            <li>Friendly</li>
-            <li>Good Listener</li>
-            <li>Helpful</li>
-            <li>Courteous</li>
-            <li>Interpersonal skills</li>
-            <li>Positive attitude</li>
-            <li>Customer service</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>EDUCATION</h2>
-        <ul>
-            <li>MEGGETON HIGH SCHOOL, MEGGETON, KANSAS 2022 - Present | GPA: 3.75</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>EXPERIENCE</h2>
-        <ul>
-            <li>PET SITTER 2021 - Present
-                <ul>
-                    <li>Suspendisse eu sollicitudin tellus. Aliquam quam nisi, hendrerit et ligula sit amet, lacinia iaculis molestie pretium lorem.</li>
-                    <li>Donec leo ligula, eleifend id molestie nec, posuere id metus. Nunc lacinia viverra dolor, id condimentum arcu tristique.</li>
-                </ul>
-            </li>
-            <li>CHILD CARE 2021 - Present
-                <ul>
-                    <li>Morbi placerat odio</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>VOLUNTEER WORK</h2>
-        <ul>
-            <li>SPUSPENDISSE UT JUSTO COACH in PHARETRA ARCU PROGRAM since 2022</li>
-        </ul>
-    </div>
+      </li>
+    </ul>
+
+    <h2>Skills</h2>
+    <h3>Programming</h3>
+    <ul>
+      <li v-for="programmingSkill in resume.Skills.Programming">{{ programmingSkill }}</li>
+    </ul>
+    <h3>Data Science</h3>
+    <ul>
+      <li v-for="dataScienceSkill in resume.Skills['Data Science']">{{ dataScienceSkill }}</li>
+    </ul>
+    <h3>Tools</h3>
+    <ul>
+      <li v-for="tool in resume.Skills.Tools">{{ tool }}</li>
+    </ul>
+    <h3>Languages</h3>
+    <ul>
+      <li v-for="language in resume.Skills.Languages">{{ language }}</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+      <li v-for="project in resume.Projects">
+        <strong>{{ project.title }}</strong>: {{ project.description }}
+      </li>
+    </ul>
+  </div>
+
+  <script src="your-script.js"></script>
 </body>
 </html>
