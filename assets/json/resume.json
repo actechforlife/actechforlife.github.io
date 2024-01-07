@@ -1,96 +1,185 @@
 {
+    "last_update":"1/1/2024",
     "Summary": {
         "description": "Hardworking, quick learner, and highly motivated to succeed in every endeavor.",
+        "introduction": "Greetings! I'm Dr. Hackman, a computer science enthusiast with an insatiable curiosity for data science. I obtained my Ph.D. degree from National Chiao Tung University, where I also completed a one-year postdoc fellowship. For both my Ph.D. and fellowship, I was supervised by Prof. Vincent S. Tseng. Prior to this, I earned my master's in computer science from Yuan Ze University and my bachelor's in computer science from The University of The Gambia. My Ph.D. dissertation is titled A Study on Trend Analysis in High Utility Itemset Mining. My research interests include data mining, machine learning, medical AI, deep learning, generative AI, and data analytics. Currently, my research is focused on the medical field, aligning with my current job position. In this role, I aim to develop medical AI models that can make a positive impact on the healthcare sector.",
         "fname": "Acquah",
         "lname": "Hackman",
         "phone": "(+886) 988-161-854",
         "email": "actechforlife@gmail.com",
-        "birthday":"May, 8",
+        "birthday": "May, 8",
         "city": "Changhua City",
-        "webpage":"actechforlife.github.io",
-        "age":"37",
-        "degree":"PhD",
-        "languages":[{"name":"English","level":"native"},{"name":"Chinese","level":"Excellent"}]
+        "webpage": "actechforlife.github.io",
+        "age": "37",
+        "degree": "PhD",
+        "languages": [
+            {
+                "name": "English",
+                "level": "*****"
+            },
+            {
+                "name": "Chinese",
+                "level": "***"
+            }
+        ]
     },
     "Education": {
         "doctorate": {
-            "name": "National Chiao Tung University",
+            "university": "National Chiao Tung University",
             "address": "Hsinchu, TW",
-            "department": "Doctorate degree.",
-            "degree": "PhD",
+            "title": "Doctorate in Electrical and Computer Science",
+            "degree": "Ph.D",
             "from": "2015",
             "to": "2021",
-            "extra": "A Study of Trend Analysis in High Utility Itemset Mining"
+            "dissertation": "A Study of Trend Analysis in High Utility Itemset Mining",
+            "advisor": {
+                "name": "Vincent S. Tseng",
+                "department": "Computer Science"
+            }
         },
         "masters": {
-            "name": "Yuan Ze University",
+            "university": "Yuan Ze University",
             "address": "Taoyuan, TW",
-            "department": "Computer Science",
+            "title": "Masters in Computer Science",
             "degree": "MSc.",
             "from": "2012",
             "to": "2014",
-            "extra": "A Study of Trend Analysis in High Utility Itemset Mining"
+            "thesis": "A Study of Trend Analysis in High Utility Itemset Mining",
+            "advisor": {
+                "name": "Hsiu-Hsen Yao",
+                "department": "Computer Science"
+            }
         },
         "bachelors": {
-            "name": "National Chiao Tung University",
-            "address": "Hsinchu, TW",
-            "department": "DOCTORATE IN ELECTRICAL AND COMPUTER SCIENCE - PH.D.",
-            "degree": "PhD",
-            "from": "2015",
-            "to": "2021",
-            "extra": "A Study of Trend Analysis in High Utility Itemset Mining"
+            "university": "The University of The Gambia",
+            "address": "Brikama, GM",
+            "title": "Bachelor in COMPUTER SCIENCE",
+            "degree": "BSc.",
+            "from": "2007",
+            "to": "2010",
+            "archievement":"Employed by the university as a graduate assistant."
         }
     },
     "Experience": [
         {
             "position": "Data Scientist",
-            "company": "Innovative Tech Solutions",
-            "duration": "2018 - Present",
+            "company": "Changhua Christian Hospital",
+            "address":"Changhua City, TW",
+            "duration": "2022 - Present",
+            "summary":"Current research on medical AI, and generative AI",
             "responsibilities": [
-                "Developing machine learning models for data analysis.",
-                "Collaborating with cross-functional teams for project success."
+                "Developing deep learning and machine learning models.",
+                "Apply computer vision techniques to medical imaging data for patient diagnosis and improve patient care.",
+                "Create data pipeplines for model development.",
+                "Playing a key role in Machine Learning Operations (MLOps), including model deployment, monitoring, and continuous improvement",
+                "Conducting exploratory data analysis to uncover insights and trends, and contributing to academic publications and industry conferences."
             ]
         },
         {
-            "position": "Software Engineer",
-            "company": "Tech Innovators",
-            "duration": "2015 - 2018",
+            "position": "Postdoctoral Researcher",
+            "company": "National Yang Ming Chiao Tung University",
+            "address":"Hsinchu, TW",
+            "duration": "2021 - 2022",
+            "summary":"Research on Medical AI and Utility Pattern Miining",
             "responsibilities": [
-                "Designing and implementing software solutions.",
-                "Troubleshooting and debugging code issues."
+                "Conduct academic research",
+                "Assist my supervisor in publication",
+                "Assist in the smooth flow of lab operations"
             ]
         }
     ],
     "Skills": {
         "Programming": [
-            "Python",
-            "Java",
-            "C++"
+            {
+                "name": "Python",
+                "competence_level": "90"
+            },
+            {
+                "name": "Java",
+                "competence_level": "85"
+            },
+            {
+                "name": "SQL Database Management (Postgres, MSSQL)",
+                "competence_level": "75"
+            },
+            {
+                "name": "HTML and CSS",
+                "competence_level": "98"
+            },
+            {
+                "name": "PHP",
+                "competence_level": "80"
+            },
+            {
+                "name": "JavaScript",
+                "competence_level": "70"
+            }
         ],
-        "Data Science": [
-            "Machine Learning",
-            "Data Analysis",
-            "Statistical Modeling"
-        ],
-        "Tools": [
-            "TensorFlow",
-            "Scikit-Learn",
-            "Pandas",
-            "SQL"
-        ],
-        "Languages": [
-            "English",
-            "Spanish"
-        ]
+        "Tech and Tools": {
+            "tech": {
+                "title": "Machine learning and deep learning frameworks",
+                "items": [
+                    "Proficient in Scikit-learn for its versatility in machine learning tasks.",
+                    "Extensive experience with Tensorflow, leveraging its robust ecosystem for deep learning projects.",
+                    "Familiarity with PyTorch, having applied its flexibility and dynamic computational graphs in a few projects for machine learning applications"
+                ]
+            },
+            "Tools": {
+                "title": "MLOPs/DevOPs",
+                "items": [
+                    "Proficient in Docker for efficient containerization, streamlining deployment workflows.",
+                    "Experience with Git for version control, ensuring collaborative and organized development processes.",
+                    "Working understanding of Kubernetes, utilizing its orchestration capabilities for scalable and resilient deployments.",
+                    "Familiarity with Jenkins for implementing robust and automated CI/CD pipelines.",
+                    "Experienced and excellent understanding of Django for web application development.",
+                    "Developed backend services using Flask, harnessing simplicity and flexibility for robust applications.",
+                    "Utilized FastAPI to create high-performance APIs, leveraging modern Python features for seamless integration."
+                ]
+            }
+        }
     },
     "Projects": [
         {
             "title": "Medical AI Simplification",
-            "description": "Developed an intuitive interface for medical AI applications, focusing on user-friendly interactions."
+            "description": "Developed an intuitive interface for medical AI applications, focusing on user-friendly interactions.",
+            "funding": {
+                "by": "Funded by the National Yang Ming Chiao Tung University",
+                "amount": "$1,000,000"
+            },
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "React.js",
+                "MongoDB"
+            ],
+            "contribution": [
+                "Developed a user-friendly interface for medical AI applications.",
+                "Implemented machine learning algorithms to improve patient care.",
+                "Designed and implemented a data pipeline for model development.",
+                "Collaborated with multidisciplinary teams including clinicians and software developers."
+            ],
+            "outcome": "Improved diagnostic accuracy by X%, resulting in enhanced patient care.",
+            "challenges": "Addressed challenges in data quality by implementing rigorous preprocessing techniques."
         },
         {
             "title": "Predictive Health Analytics",
             "description": "Implemented a machine learning model to predict patient health outcomes based on historical data."
+        }
+    ],
+    "Publications": [
+        {
+            "title": "Item set mining",
+            "authors": "Hsiu-Hsen Yao, Vincent S. Tseng",
+            "journal": "Journal of Computational and Graphical Statistics",
+            "year": "2021",
+            "role": "first author"
+        },
+        {
+            "title": "Medical AI Simplification",
+            "authors": "Hsiu-Hsen Yao, Vincent S. Tseng",
+            "journal": "Journal of Computational and Graphical Statistics",
+            "year": "2021",
+            "role": "first author"
         }
     ]
 }
