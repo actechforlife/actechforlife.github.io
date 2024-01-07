@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Acquah Hackman's Resume</title>
+  <title>{{fullName}}'s Resume</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,6 +25,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -99,7 +100,7 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" id="app">
 
         <div class="section-title">
           <div>
@@ -134,26 +135,29 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>May 8</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a
-                        href="https://actechforlife.github.io/">actechforlife.github.io</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+886-988-161-854</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Changhua City, Taiwan</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong><span v-if="resume.Summary">{{resume.Summary.birthday}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong><span v-if="resume.Summary"><a
+                        href="https://actechforlife.github.io/">{{resume.Summary.webpage}}</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong><span v-if="resume.Summary">{{resume.Summary.phone}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong><span v-if="resume.Summary">{{resume.Summary.city}}</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>37</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Doctor</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>actechforlife@gmail.com</span>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span v-if="resume.Summary">37</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong v-if="resume.Summary">
+                    <span>Doctor</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span
+                      v-if="resume.Summary">{{resume.Summary.email}}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
                     <strong>Languages:</strong>
                     <span>
                       <ul>
-                        <li>English <span class="proficiency">★★★★★</span><span class="stars"></span></li>
-                        <li>Chinese <span class="proficiency">★★★</span><span class="stars">★★</span></li>
+                        <li >English <span class="proficiency">★★★★★</span><span class="stars"></span></li>
+                        <li >Chinese <span class="proficiency">★★★</span><span class="stars">★★</span></li>
                         <!-- Add more languages as needed -->
                       </ul>
                     </span>
@@ -336,7 +340,8 @@
 
         <div class="section-title">
           <h2>Resume</h2>
-          <p>For a brief overview of my resume, please refer to the content below. Click <a href="resume.html">here</a> to
+          <p>For a brief overview of my resume, please refer to the content below. Click <a href="resume.html">here</a>
+            to
             download and view the complete resume.</p>
         </div>
 
@@ -385,25 +390,28 @@
               <h4>Data Scientist</h4>
               <h5>2022 - Present</h5>
               <p><em>Changhua Christian Hospital, Changhua City, TW </em></p>
-              <p><strong><em>Summary</em></strong>: Current research on medical AI, and generative AI<br> 
-                <a href="resume.html"><small><em>details</em> >></small></a></p>
+              <p><strong><em>Summary</em></strong>: Current research on medical AI, and generative AI<br>
+                <a href="resume.html"><small><em>details</em> >></small></a>
+              </p>
 
             </div>
             <div class="resume-item">
               <h4>Postdoctoral Researcher</h4>
               <h5>2021 - 2022</h5>
               <p><em>National Yang Ming Chiao Tung University, Hsinchu City, TW</em></p>
-              <p><strong><em>Summary</em></strong>: Research on Medical AI, and Utility Pattern Mining. 
+              <p><strong><em>Summary</em></strong>: Research on Medical AI, and Utility Pattern Mining.
                 <br>
-                <a href="resume.html"><small><em>details</em> >></small></a></p>
+                <a href="resume.html"><small><em>details</em> >></small></a>
+              </p>
             </div>
             <div class="resume-item">
               <h4>Computer Science Lecturer</h4>
               <h5>2014 - 2015</h5>
               <p><em>The University of The Gambia, Brikama, GM</em></p>
-              <p><strong><em>Summary</em></strong>: I taught computer science courses. 
+              <p><strong><em>Summary</em></strong>: I taught computer science courses.
                 <br>
-                <a href="resume.html"><small><em>details</em> >></small></a></p>
+                <a href="resume.html"><small><em>details</em> >></small></a>
+              </p>
             </div>
             <h3 class="resume-title">Recent Publications</h3>
             <div class="resume-item">
@@ -431,7 +439,7 @@
         <div class="section-title">
           <h2>Projects Portfolio</h2>
           <p>Explore a curated list of projects I have contributed to, detailing my roles and project outcomes.</p>
-      </div>      
+        </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -800,7 +808,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/resume.js"></script>
 </body>
 
 </html>
