@@ -39,7 +39,15 @@ new Vue({
         const project = this.resume.Projects[projectIndex];
 
         // make a list of all projects in an id
-        
+        const projectList = this.resume.Projects.map((project, index) => {
+          return `<li><a href="portfolio-details.html?project_index=${index}">${project.title}</a></li>`;
+        });
+
+        // get the project list and convert to HTML list for display
+        const projectsHtml = `<ul>${projectList.join('')}</ul>`;
+        document.getElementById('projectList').innerHTML = projectsHtml;
+
+
 
         // Check if project is defined
         if (project) {
@@ -51,12 +59,10 @@ new Vue({
           // comma and space seperated technologies          
           const technologies = project.technologies.join(', ');
           document.getElementById('technologies').textContent = technologies;
-          // get the contibutin list and convert to html list for display
-          const contributionList = project.contribution.map((contribution) => {
-            return `<li>${contribution}</li>`;
-          }
-          ).join('');
+          // get the contribution list and convert to HTML list for display
+          const contributionList = `<ul>${project.contribution.map((contribution) => `<li>${contribution}</li>`).join('')}</ul>`;
           document.getElementById('contributionList').innerHTML = contributionList;
+
           // outcome
           document.getElementById('outcome').textContent = project.outcome;
           // challenges

@@ -26,6 +26,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-i18n@8"></script>
 
 
   <!-- Template Main CSS File -->
@@ -43,6 +44,9 @@
       text-transform: capitalize;
       padding:0;
       margin: 0;
+    }
+    #contributionList ul{
+      list-style-type: disc;
     }
 
   </style>
@@ -133,11 +137,16 @@
                 <li><strong>Institution</strong>: <span id="projectInstitution"></span></li>
                 <li><strong>Project Status</strong>: <span id="projectStatus"></span></li>
               </ul>
+              <br>
+              <h3>Other Projects</h3>
+              <div id="projectList"></div>
+
+              <div id="app">
+                <p>{{ $t('greeting') }}</p>
+              </div>
+              
+              
             </div>
-            <!-- <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p id="projectDescription"></p>
-            </div> -->
           </div>
 
         </div>
@@ -181,6 +190,25 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/resume.js"></script>
   <!-- portfolio-details.html -->
+  <script>
+    // Initialize Vue I18n
+    const i18n = new VueI18n({
+      locale: 'en',
+      messages: {
+        en: {
+          greeting: 'Hello!',
+          // Other English translations...
+        },
+        // Translations for other languages...
+      },
+    });
+  
+    new Vue({
+      el: '#app',
+      i18n,
+      // Other Vue instance options...
+    });
+  </script>
 
 
 </body>
