@@ -1,5 +1,5 @@
 {
-    "last_update":"1/1/2024",
+    "last_update": "1/1/2024",
     "Summary": {
         "description": "Hardworking, quick learner, and highly motivated to succeed in every endeavor.",
         "introduction": "Greetings! I'm Dr. Hackman, a computer science enthusiast with an insatiable curiosity for data science. I obtained my Ph.D. degree from National Chiao Tung University, where I also completed a one-year postdoc fellowship. For both my Ph.D. and fellowship, I was supervised by Prof. Vincent S. Tseng. Prior to this, I earned my master's in computer science from Yuan Ze University and my bachelor's in computer science from The University of The Gambia. My Ph.D. dissertation is titled A Study on Trend Analysis in High Utility Itemset Mining. My research interests include data mining, machine learning, medical AI, deep learning, generative AI, and data analytics. Currently, my research is focused on the medical field, aligning with my current job position. In this role, I aim to develop medical AI models that can make a positive impact on the healthcare sector.",
@@ -57,16 +57,16 @@
             "degree": "BSc.",
             "from": "2007",
             "to": "2010",
-            "archievement":"Employed by the university as a graduate assistant."
+            "archievement": "Employed by the university as a graduate assistant."
         }
     },
     "Experience": [
         {
             "position": "Data Scientist",
             "company": "Changhua Christian Hospital",
-            "address":"Changhua City, TW",
+            "address": "Changhua City, TW",
             "duration": "2022 - Present",
-            "summary":"Current research on medical AI, and generative AI",
+            "summary": "Current research on medical AI, and generative AI",
             "responsibilities": [
                 "Developing deep learning and machine learning models.",
                 "Apply computer vision techniques to medical imaging data for patient diagnosis and improve patient care.",
@@ -78,13 +78,25 @@
         {
             "position": "Postdoctoral Researcher",
             "company": "National Yang Ming Chiao Tung University",
-            "address":"Hsinchu, TW",
+            "address": "Hsinchu, TW",
             "duration": "2021 - 2022",
-            "summary":"Research on Medical AI and Utility Pattern Miining",
+            "summary": "Research on Medical AI and Utility Pattern Miining",
             "responsibilities": [
                 "Conduct academic research",
                 "Assist my supervisor in publication",
                 "Assist in the smooth flow of lab operations"
+            ]
+        },
+        {
+            "position": "Computer Science Lecturer",
+            "company": "The University Of The Gambia",
+            "address": "Brimaka, GM",
+            "duration": "2014 - 2015",
+            "summary": "Prepared and delivered computer science lecures.",
+            "responsibilities": [
+                "Prepared and delivered computer science lectures",
+                "Analyse and record student performance",
+                "Students guidance on academic research"
             ]
         }
     ],
@@ -140,46 +152,194 @@
     },
     "Projects": [
         {
-            "title": "Medical AI Simplification",
-            "description": "Developed an intuitive interface for medical AI applications, focusing on user-friendly interactions.",
+            "title": "Funduscopic Image Analysis",
+            "description": "The goal of this project is to analyse the funduscopic images of the patient to find the relationship between the status of the fundus and systemic disease.",
             "funding": {
-                "by": "Funded by the National Yang Ming Chiao Tung University",
-                "amount": "$1,000,000"
+                "by": "Funded by Changhua Christian Hospital",
+                "amount": "$600,000"
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2023",
+                "end": "ongoing"
             },
             "technologies": [
                 "Python",
                 "TensorFlow",
-                "React.js",
-                "MongoDB"
+                "Python-Flask"
             ],
             "contribution": [
                 "Developed a user-friendly interface for medical AI applications.",
-                "Implemented machine learning algorithms to improve patient care.",
-                "Designed and implemented a data pipeline for model development.",
-                "Collaborated with multidisciplinary teams including clinicians and software developers."
+                "Developed the strateggy for model training.",
+                "Implemented the deep learning methods for funduscopic image analysis.",
+                "Drafted an wrote over 70% of the research manuscript."
             ],
-            "outcome": "Improved diagnostic accuracy by X%, resulting in enhanced patient care.",
-            "challenges": "Addressed challenges in data quality by implementing rigorous preprocessing techniques."
+            "outcome": "So far, we have achieved a 91% model's accuracy, and our manuscript is almost ready for submission.",
+            "challenges": "Being the sole technical person on the team, I had to learn and adapt to new technologies and tools, which was a challenge."
         },
         {
-            "title": "Predictive Health Analytics",
-            "description": "Implemented a machine learning model to predict patient health outcomes based on historical data."
+            "title": "Large Language Model for ICD Coding",
+            "description": "Automation of ICD (International Classification of Diseases) code prediction from medical records. In this project, the goal is to finetune open source large language models to predict ICD codes from medical records. The current manual process of assigning ICD codes to diseases is prone to errors and can be subjective to human interpretation.",
+            "funding": {
+                "by": "Funded by Changhua Christian Hospital",
+                "amount": ""
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2023",
+                "end": "ongoing"
+            },
+            "technologies": [
+                "Python",
+                "Llama-2",
+                "Falcon",
+                "Python-Flask",
+                "FastAPI",
+                "PostgreSQL"
+            ],
+            "contribution": [
+                "Data clearning and preprocessing.",
+                "Developed the strateggies to finetune the models.",
+                "User interface development for ICD coding.",
+                "Drafted an wrote over 98% of the research manuscript."
+            ],
+            "outcome": "The project has produced an Open Source ICD coder, poised to significantly reduce coding time, with my ongoing commitment to optimize its use.",
+            "challenges": "Managing the dataset presented a significant challenge, necessitating innovative strategies for information extraction and model-friendly representation."
+        },
+        {
+            "title": "Skin Lesion detection and Classification",
+            "description": "Using over three thousand images from the EHR system of Changhua Christian Hospital, we aim to develop a model to detect skin lesions and classify them into different categories.",    
+            "funding": {
+                "by": "No Funding",
+                "amount": ""
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2023",
+                "end": "ongoing"
+            },
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "Python-Flask",
+            "OpenCV"
+            ],
+            "contribution": [
+                "Prepared the dataset for training.",
+                "Trained the models for classification.",
+                "Built the user interface for the model."
+            ],
+            "outcome": "Our initial accuracy on the binary classfication task was 92%, but we are working on improving the model's performance and increase the number of classes.",
+            "challenges": "There are serveral artifacts on the dataset that needs to be removed. Our first approach was to use cropping to avoid the artifacts, we hope to test out other approaches in the future."
+        },
+        {
+            "title": "Detection of LVI from WSI using deep learning methods",
+            "description": "The use of Lymphovascular Invation(LVI) is a well studied application of using deep learning in pathology. However, in our hospital, we are developing a deep learning model to identify LVI and implement a report generator to help reduce the work load of the pathologist.",
+            "funding": {
+                "by": "No Funding",
+                "amount": ""
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2023",
+                "end": "ongoing"
+            },
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "Python-Flask",
+                "OpenCV",
+                "FastAPI"
+            ],
+            "contribution": [
+                "Data cleaning and preprocessing.",
+                "Model building and training.",
+                "User interface development for LVI detection."
+            ],
+            "outcome": "Our developed platform can identify the precesss of LVI in the WSI images with 95% accuracy. Currently we are intigrating the model inference into a report generation framework.",
+            "challenges": "The size of each Whole Slide Image is significanly large, for this, we used a slicing strategy to process each image."
+        },
+        {
+            "title": "No-Code Low-Code AutoML Platform for Medical AI Applications",
+            "description": "This project is aimed at producing a userfirendly platform that medical professionals can use without the need for any coding. Domain experts in data science can also use this application to build their own models.",
+            "funding": {
+                "by": "Funded by Changhua Christian Hospital",
+                "amount": "awaiting funding"
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2023",
+                "end": "ongoing"
+            },
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "Django",
+                "FastAPI",
+                "Docker container",
+                "Celery",
+                "Redis",
+                "PostgreSQL"
+            ],
+            "contribution": [
+                "Designed the project architecture.",
+                "Developed the user management module",
+                "Developed the MVP of the Low-code Module",
+                "Implemented the CSV data import module",
+                "Implemended the CSV data cleaning module"
+            ],
+            "outcome": "The current outcome includes the CSV data cleaning module and the low-code module. The low-code module is currently under development.",
+            "challenges": "The main challenge in this project is the number of manpower available, we are currently working on finding a solution to this problem when the funding goes through."
         }
     ],
     "Publications": [
         {
-            "title": "Item set mining",
-            "authors": "Hsiu-Hsen Yao, Vincent S. Tseng",
-            "journal": "Journal of Computational and Graphical Statistics",
+            "title": "Automatic Segmentation of Membranous Glottal Gap Area with U-Net-based Architecture",
+            "authors": "Acquah Hackman, Chih-Hua Chen, Andy Wei-Ge Chen, Mu-Kuan Chen",
+            "type": "Journal",
+            "publisher_name": "The Laryngoscope",
+            "year": "2023",
+            "role": "first author"
+        },
+        {
+            "title": "Stable High Utility Itemset Mining",
+            "authors": "Acquah Hackman, Yu Huang, Philippe Fournier-Viger, Vincent Tseng",
+            "type": "Conference",
+            "publisher_name": "iiWAS 2021",
             "year": "2021",
             "role": "first author"
         },
         {
-            "title": "Medical AI Simplification",
-            "authors": "Hsiu-Hsen Yao, Vincent S. Tseng",
-            "journal": "Journal of Computational and Graphical Statistics",
-            "year": "2021",
+            "title": "Mining emerging high utility itemsets over streaming database",
+            "authors": "Acquah Hackman, Yu Huang, Philip S Yu, Vincent S Tseng",
+            "type": "Conference",
+            "publisher_name": "ADMA 2019",
+            "year": "2019",
             "role": "first author"
+        },
+        {
+            "title": "Accessing and constructing driving data to develop fuel consumption forecast model",
+            "authors": "Rei-Jo Yamashita, Hsiu-Hsen Yao, Shih-Wei Hung, Acquah Hackman",
+            "type": "Conference",
+            "publisher_name": "IOP Conference Series: Earth and Environmental Science",
+            "year": "2018",
+            "role": "fourth author"
+        },
+        {
+            "title": "Mining trending high utility itemsets from temporal transaction databases",
+            "authors": "Acquah Hackman, Yu Huang, Vincent S Tseng",
+            "type": "Conference",
+            "publisher_name": "DEXA 2018",
+            "year": "2018",
+            "role": "first author"
+        },
+        {
+            "title": "Generating a road situation data warehouse using detectives car approach",
+            "authors": "Cheng-Da Huang, Acquah Hackman, Hsiu-Hsen Yao, Syuan-Yi Chen",
+            "type": "Conference",
+            "publisher_name": "ICITCS 2013",
+            "year": "2013",
+            "role": "second author"
         }
     ]
 }

@@ -402,7 +402,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <h3 class="resume-title">Professional Experience</h3>
 
-              <div class="resume-item" v-for="exp in resume.Experience">
+              <div class="resume-item" v-for="(exp, index) in resume.Experience" v-if="index < 2">
                 <h4>{{exp.position}}</h4>
                 <h5>{{exp.duration}}</h5>
                 <p><em>{{exp.company}}, {{exp.address}}</em></p>
@@ -413,7 +413,7 @@
               <h3 class="resume-title">Recent Publications</h3>
               <div class="resume-item">
                 <ul>
-                  <li v-for="pub in resume.Publications">{{pub.title}}</li>
+                  <li v-for="(pub, index) in resume.Publications" v-if="index < 5">{{pub.title}}</li>
                 </ul>
               </div>
             </div>
@@ -448,16 +448,24 @@
 
           <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-            <div v-for="pub in resume.Projects" class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- create a card -->
+            <div v-for="(project,index) in resume.Projects" class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="card" style="height: 16em; overflow-y: auto;">
+                <div class="card-body">
+                  <h5 class="card-title">{{project.title}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">{{truncateDescription(project.description)}}</p>
+                  <div class="tags">
+                    <span class="badge badge-info text-dark" style = "background-color: rgb(214, 213, 213); margin: 3px;padding: 2px;border-radius: 3px;" v-for="tech in project.technologies">{{ tech }}</span>
+                  </div>
+                  <a :href="'portfolio-details.html?project_index=' + index" class="card-link btn" style="position: absolute; bottom: 0px; right: 0px; border: none; background-color: #040B14; color: aliceblue; border-radius: 5px 0px; padding: 3px; font-size: small;">Read More</a>
+
                 </div>
               </div>
             </div>
+
+
+
           </div>
 
         </div>
