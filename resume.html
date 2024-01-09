@@ -276,11 +276,19 @@
     <section class="resume-page" id="resume-page">
       <div class="container">
         <div class="header">
-          <h1>{{fullName}},Ph.D</h1>
+          <h1>{{fullName}}, Ph.D</h1>
           <p style="font-weight: bold;">{{resume.Summary.job}}</p>
-          <p style="font-style: italic;">{{resume.Summary.city}}</p>
-          <p style="font-style: italic; word-spacing: 8px;"><a href="">{{resume.Summary.email}}</a> | webpage: {{resume.Summary.webpage}} | {{resume.Summary.phone}}</p>
+          <p style="font-style: italic;">
+            <i class="bi bi-geo-alt"></i> {{resume.Summary.city}}
+          </p>          <p style="font-style: italic; word-spacing: 8px;">
+            <i class="bi bi-envelope"></i>
+            <a :href="'mailto:'+ resume.Summary.email">{{resume.Summary.email}}</a> |
+            <i class="bi bi-globe"></i>
+            <a :href="'https://' + resume.Summary.webpage" target="_blank">{{resume.Summary.webpage}}</a> |
+            <i class="bi bi-phone"></i>
+            {{resume.Summary.phone}}</p>
         </div>
+        
         <div class="summary">
           <h2>Summary</h2>
           <p>{{resume.Summary.introduction}}</p>
