@@ -1,0 +1,35 @@
+@media print {
+  /* ... existing styles ... */
+
+  .summary,
+  .experience,
+  .education,
+  .skills,
+  .open-source,
+  .publications {
+    page-break-before: always; /* Add page break before each section */
+  }
+
+  /* Additional adjustments for print layout */
+  main .resume-page {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    page-break-inside: avoid; /* Avoid breaking inside the resume container */
+  }
+
+  .resume-page .container {
+    background-color: #fbfbfb;
+    color: antiquewhite;
+    padding: 1em; /* Adjust padding as needed */
+    box-shadow: none; /* Remove drop shadow */
+  }
+
+  .open-source-list {
+    padding-left: 0;
+  }
+
+  .project-entry {
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
+}

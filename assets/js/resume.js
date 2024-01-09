@@ -1,5 +1,5 @@
 new Vue({
-  el: '#app',
+  el: '#main',
   data: {
     resume: {}
   },
@@ -37,11 +37,17 @@ new Vue({
       if (this.resume.Projects) {
         // Use the project index to fetch the corresponding project details
         const project = this.resume.Projects[projectIndex];
+        // Create an array of sorted project indices
+        const sortedIndices = this.resume.Projects
+          .map((_, index) => index)
+          .sort((a, b) => this.resume.Projects[a].title.localeCompare(this.resume.Projects[b].title));
 
-        // make a list of all projects in an id
-        const projectList = this.resume.Projects.map((project, index) => {
-          return `<li><a href="portfolio-details.html?project_index=${index}">${project.title}</a></li>`;
+        // Make a list of all projects in an id
+        const projectList = sortedIndices.map((index) => {
+          return `<li><a href="portfolio-details.html?project_index=${index}">${this.resume.Projects[index].title}</a></li>`;
         });
+
+        // sort projectList onproject.title;
 
         // get the project list and convert to HTML list for display
         const projectsHtml = `<ul>${projectList.join('')}</ul>`;
@@ -55,7 +61,9 @@ new Vue({
           document.getElementById('projectTitle').textContent = project.title;
           document.getElementById('projectDescription').textContent = project.description;
           document.getElementById('projectInstitution').textContent = project.institution;
+          document.getElementById('projectFunding').textContent = project.funding.amount;
           document.getElementById('projectStatus').textContent = project.duration.end;
+          // project funding amount
           // comma and space seperated technologies          
           const technologies = project.technologies.join(', ');
           document.getElementById('technologies').textContent = technologies;

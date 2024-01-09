@@ -9,3 +9,6 @@ git add .
 git commit -m "Your commit message"
 git push origin master
 ```
+
+# Updating Resume
+Edit the resume.json file.

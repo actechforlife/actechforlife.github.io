@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - iPortfolio Bootstrap Template</title>
+  <title>Full Resume</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -26,6 +28,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Add this link in the head section of your HTML -->
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/pdf-style.css" media="print"> -->
+
+  <link rel="stylesheet" type="text/css" href="assets/css/print.css" media="print">
+
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -34,7 +41,175 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <style>
+    .summary {
+      /* background-color: #f9f6f6; */
+      /* padding: 20px; */
+      /* justify the content */
+      text-align: justify;
+    }
+    .header{
+      /* center all */
+      text-align: center;
+      /* reduce the line-height: ; */
+      line-height: .5;
+      font-size: .8em;
+    }
+    .header h1{
+      font-size: 2.5em;
+      font-family: 'Courier New', Courier, monospace;
+      
+    }
+    .experience,
+    .education,
+    .skills,
+    .open-source {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      border-bottom: 1px solid #000;
+    }
+
+    .job-title {
+      font-weight: bold;
+    }
+
+    .job-company {
+      font-style: italic;
+    }
+
+    .job-date {
+      float: right;
+    }
+
+    .skills-list,
+    .open-source-list {
+      padding-left: 0;
+    }
+
+    /* .skills-list li,
+    .open-source-list li {
+      list-style: none;
+    } */
+
+    .resume-page .container {
+      /* background-color: #fbfbfb; */
+      /* backdrop */
+      padding: 5em;
+      /* border-radius: 10px; */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Add these styles to your existing CSS */
+
+    .open-source-list {
+      padding-left: 0;
+    }
+
+    .project-entry {
+      margin-bottom: 40px;
+    }
+
+    .project-entry h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .project-type {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .project-description,
+    .project-funding,
+    .project-institution,
+    .project-duration,
+    .project-technologies,
+    .project-outcome,
+    .project-challenges {
+      margin-bottom: 10px;
+    }
+
+    .project-contribution {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .project-contribution li {
+      margin-bottom: 5px;
+    }
+
+    .project-detail-header {
+      color: rgb(19, 11, 27);
+      font-style: italic;
+    }
+
+    /* Add these styles to your existing CSS */
+    /* Add these styles to your existing CSS */
+
+    .publications-list {
+      padding-left: 0;
+    }
+
+    .publication-entry {
+      margin-bottom: 20px;
+    }
+
+    .publication-citation {
+      margin-bottom: 5px;
+    }
+
+    .publication-authors {
+      font-weight: bold;
+    }
+
+    .publication-title {
+      font-style: italic;
+    }
+
+    .publication-type {
+      margin-left: 5px;
+    }
+
+    .publication-publisher {
+      margin-left: 5px;
+    }
+
+    .publication-year {
+      margin-left: 5px;
+    }
+
+    .publication-role {
+      margin-top: 5px;
+      font-style: italic;
+      font-size: x-small;
+      background-color: rgb(245, 247, 250);
+      padding: 1px 3px;
+      width: fit-content;
+      border-radius: 5px;
+      box-shadow: 0 0 0 1px #f8f1f1;
+      /* float it to the right */
+
+    }
+
+    @media print {
+
+      /* Add the PDF styles here */
+      body {
+        background-color: #fff;
+        /* Set the background color for the PDF */
+      }
+
+      /* Add any other print-specific styles you need */
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -48,7 +223,7 @@
 
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <h1 class="text-light"><a href="index.html">Acquah Hackman</a></h1>
         <div class="social-links mt-3 text-center">
           <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -64,10 +239,15 @@
         <ul>
           <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="index.html#skills" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Skills</span></a>
+          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+          </li>
+          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+              <span>Projects</span></a></li>
+          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a> -->
+          </li>
+          <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a> -->
+          </li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -80,27 +260,149 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>Full Resume |
+            <i class="bi bi-filetype-pdf" onclick="downloadPDF()" style="color:#75E1F8; cursor:pointer;"></i> 
+            <!-- <a href="#" onclick="printPage()">print</a> -->
+          </h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
+            <li>Full Resume</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
+    <section class="resume-page" id="resume-page">
       <div class="container">
-        <p>
-          Example inner page template
-        </p>
-        <div id="app">
-          <ul>
-            <li v-for="skill in skills">{{ skill }}</li>
-          </ul>
+        <div class="header">
+          <h1>{{fullName}},Ph.D</h1>
+          <p style="font-weight: bold;">{{resume.Summary.job}}</p>
+          <p style="font-style: italic;">{{resume.Summary.city}}</p>
+          <p style="font-style: italic; word-spacing: 8px;"><a href="">{{resume.Summary.email}}</a> | webpage: {{resume.Summary.webpage}} | {{resume.Summary.phone}}</p>
+        </div>
+        <div class="summary">
+          <h2>Summary</h2>
+          <p>{{resume.Summary.introduction}}</p>
+        </div>
+        <div class="experience">
+          <h2>Experience</h2>
+          <!-- Repeat this section for each job entry -->
+          <div class="job-entry" v-for="(exp, index) in resume.Experience">
+            <span class="job-title">{{exp.position}}</span> -
+            <span class="job-company">{{exp.company}}</span>
+            <span class="job-date">{{exp.duration}}</span>
+            <ul>
+              <li v-for="(responsibility, index) in exp.responsibilities">{{responsibility}}</li>
+              <!-- Add more list items as needed -->
+            </ul>
+          </div>
+          <!-- End of job entry section -->
+        </div>
+        <div class="education">
+          <h2>Education</h2>
+          <!-- Education Entry -->
+          <div class="education-entry">
+            <p>
+              <strong>{{resume.Education.doctorate.university}}, {{resume.Education.doctorate.department}}</strong>
+              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.doctorate.address}} <br> {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}</span>
+            </p>
+            <ul>
+              <li>Advisor: Dr. {{resume.Education.doctorate.advisor.name}} ({{resume.Education.doctorate.advisor.department}}, {{resume.Education.doctorate.university}})</li>
+            </ul>
+          </div>
+
+          <div class="education-entry">
+            <p>
+              <strong>{{resume.Education.masters.university}}, {{resume.Education.masters.department}}</strong>
+              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.masters.address}} <br> {{resume.Education.masters.from}} - {{resume.Education.masters.to}}</span>
+            </p>
+            <ul>
+              <li>Advisor: Dr. {{resume.Education.masters.advisor.name}} ({{resume.Education.masters.advisor.department}}, {{resume.Education.masters.university}})</li>
+            </ul>
+          </div>
+
+          <div class="education-entry">
+            <p>
+              <strong>{{resume.Education.bachelors.university}}, {{resume.Education.bachelors.department}}</strong>
+              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.bachelors.address}} <br> {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}</span>
+            </p>
+            <!-- <ul>
+              <li>Advisor: Dr. {{resume.Education.doctorate.advisor.name}} ({{resume.Education.doctorate.advisor.department}}, {{resume.Education.doctorate.university}})</li>
+            </ul> -->
+          </div>
+          <!-- Add more education entries as needed -->
         </div>
         
+        
+        <div class="skills">
+          <h2>Skills</h2>
+          <ul class="skills-list">
+            <!-- Add skills here -->
+            <li>Programming Languages: {{ resume.Skills.Programming.map(language => language.name).join(', ') }}
+            </li>
+            <li>
+              {{resume.Skills.Tech_and_Tools.title}}:
+              <ul>
+                <li>
+                  {{resume.Skills.Tech_and_Tools.tech.title}}:
+                  <ul>
+                    <li v-for="(tech_skill, index) in resume.Skills.Tech_and_Tools.tech.items" v-html="tech_skill"></li>
+                  </ul>
+
+                </li>
+                <li>
+                  {{resume.Skills.Tech_and_Tools.tools.title}}:
+                  <ul>
+                    <li v-for="(tool_skill, index) in resume.Skills.Tech_and_Tools.tools.items" v-html="tool_skill">
+                    </li>
+                </li>
+              </ul>
+
+            </li>
+            <!-- More skills -->
+          </ul>
+        </div>
+        <div class="open-source">
+          <h2>Projects</h2>
+          <ul class="open-source-list">
+            <li v-for="project in resume.Projects" class="project-entry">
+              <h5>{{ project.title }}<span class="job-date"
+                  style="font-style: italic;font-size: small;text-transform: uppercase;">{{ project.duration.start }} -
+                  {{ project.duration.end }}</span>
+              </h5>
+
+              <!-- <p class="project-type">{{ project.type }}</p> -->
+              <div class="project-details">
+                <p class="project-technologies"><span class="project-detail-header">Technologies</span>: {{
+                  project.technologies.join(', ') }}</p>
+              </div>
+              <p class="project-contribution"><span class="project-detail-header">Contribution:</span> {{
+                project.contribution.join(' ') }}</p>
+
+              <p class="project-outcome"><span class="project-detail-header">Outcome:</span> {{ project.outcome }}</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="publications">
+          <h2>Publications</h2>
+          <ul class="publications-list">
+            <li v-for="publication in resume.Publications" class="publication-entry">
+              <p class="publication-citation">
+                <span v-html="publication.authors"></span>
+                <span class="publication-title">{{ publication.title }}</span>
+                <span class="publication-type">{{ publication.type }}</span>
+                <span class="publication-publisher">{{ publication.publisher_name }}</span>
+                <span class="publication-year">({{ publication.year }})</span>
+              </p>
+              <p class="publication-role">Role: {{ publication.role }}</p>
+            </li>
+          </ul>
+        </div>
+
+
+
       </div>
     </section>
 
@@ -122,7 +424,8 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -137,8 +440,37 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="your-script.js"></script>
+  <script src="assets/js/resume.js"></script>
+  <script>
+    function printPage() {
+      window.print();
+    }
+  </script>
 
+
+  <!-- Add this script in the head or at the end of the body -->
+  <!-- Modify this script in your HTML -->
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('resume-page'); // Replace 'resume-page' with the ID of your resume container
+
+      const pdfStyle = document.createElement('link');
+      pdfStyle.rel = 'stylesheet';
+      pdfStyle.type = 'text/css';
+      pdfStyle.href = 'assets/css/pdf-style.css';
+      pdfStyle.media = 'print';
+
+      document.head.appendChild(pdfStyle);
+
+      html2pdf(element);
+
+      // Remove the added style after generating PDF
+      pdfStyle.parentNode.removeChild(pdfStyle);
+    }
+  </script>
+
+
+  assets/css/style.css
 </body>
 
 </html>
