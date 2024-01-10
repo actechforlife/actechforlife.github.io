@@ -52,18 +52,21 @@
       /* justify the content */
       text-align: justify;
     }
-    .header{
+
+    .header {
       /* center all */
       text-align: center;
       /* reduce the line-height: ; */
       line-height: .5;
       font-size: .8em;
     }
-    .header h1{
+
+    .header h1 {
       font-size: 2.5em;
       font-family: 'Courier New', Courier, monospace;
-      
+
     }
+
     .experience,
     .education,
     .skills,
@@ -237,10 +240,13 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+              <span>Home</span></a></li>
+          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
+          </li>
           <li><a href="index.html#skills" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Skills</span></a>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+              <span>Resume</span></a>
           </li>
           <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
               <span>Projects</span></a></li>
@@ -261,7 +267,7 @@
 
         <div class="d-flex justify-content-between align-items-center">
           <h2>Full Resume |
-            <i class="bi bi-filetype-pdf" onclick="downloadPDF()" style="color:#75E1F8; cursor:pointer;"></i> 
+            <i class="bi bi-filetype-pdf" onclick="downloadPDF()" style="color:#75E1F8; cursor:pointer;"></i>
             <!-- <a href="#" onclick="printPage()">print</a> -->
           </h2>
           <ol>
@@ -280,15 +286,19 @@
           <p style="font-weight: bold;">{{resume.Summary.job}}</p>
           <p style="font-style: italic;">
             <i class="bi bi-geo-alt"></i> {{resume.Summary.city}}
-          </p>          <p style="font-style: italic; word-spacing: 8px;">
+          </p>
+          <p style="font-style: italic; word-spacing: 8px;">
             <i class="bi bi-envelope"></i>
             <a :href="'mailto:'+ resume.Summary.email">{{resume.Summary.email}}</a> |
             <i class="bi bi-globe"></i>
             <a :href="'https://' + resume.Summary.webpage" target="_blank">{{resume.Summary.webpage}}</a> |
             <i class="bi bi-phone"></i>
-            {{resume.Summary.phone}}</p>
+            {{resume.Summary.phone}} | 
+            <i class="bi bi-calendar2-week"></i>
+            last updated: {{resume.last_update}}
+          </p>
         </div>
-        
+
         <div class="summary">
           <h2>Summary</h2>
           <p>{{resume.Summary.introduction}}</p>
@@ -313,27 +323,32 @@
           <div class="education-entry">
             <p>
               <strong>{{resume.Education.doctorate.university}}, {{resume.Education.doctorate.department}}</strong>
-              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.doctorate.address}} <br> {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}</span>
+              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.doctorate.address}}
+                <br> {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}</span>
             </p>
             <ul>
-              <li>Advisor: Dr. {{resume.Education.doctorate.advisor.name}} ({{resume.Education.doctorate.advisor.department}}, {{resume.Education.doctorate.university}})</li>
+              <li>Advisor: Dr. {{resume.Education.doctorate.advisor.name}}
+                ({{resume.Education.doctorate.advisor.department}}, {{resume.Education.doctorate.university}})</li>
             </ul>
           </div>
 
           <div class="education-entry">
             <p>
               <strong>{{resume.Education.masters.university}}, {{resume.Education.masters.department}}</strong>
-              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.masters.address}} <br> {{resume.Education.masters.from}} - {{resume.Education.masters.to}}</span>
+              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.masters.address}}
+                <br> {{resume.Education.masters.from}} - {{resume.Education.masters.to}}</span>
             </p>
             <ul>
-              <li>Advisor: Dr. {{resume.Education.masters.advisor.name}} ({{resume.Education.masters.advisor.department}}, {{resume.Education.masters.university}})</li>
+              <li>Advisor: Dr. {{resume.Education.masters.advisor.name}}
+                ({{resume.Education.masters.advisor.department}}, {{resume.Education.masters.university}})</li>
             </ul>
           </div>
 
           <div class="education-entry">
             <p>
               <strong>{{resume.Education.bachelors.university}}, {{resume.Education.bachelors.department}}</strong>
-              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.bachelors.address}} <br> {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}</span>
+              <span style="font-style: italic;float: right; text-align: right;">{{resume.Education.bachelors.address}}
+                <br> {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}</span>
             </p>
             <!-- <ul>
               <li>Advisor: Dr. {{resume.Education.doctorate.advisor.name}} ({{resume.Education.doctorate.advisor.department}}, {{resume.Education.doctorate.university}})</li>
@@ -341,8 +356,8 @@
           </div>
           <!-- Add more education entries as needed -->
         </div>
-        
-        
+
+
         <div class="skills">
           <h2>Skills</h2>
           <ul class="skills-list">

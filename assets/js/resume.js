@@ -63,6 +63,7 @@ new Vue({
           document.getElementById('projectInstitution').textContent = project.institution;
           document.getElementById('projectFunding').textContent = project.funding.amount;
           document.getElementById('projectStatus').textContent = project.duration.end;
+          document.getElementById('projectRole').textContent = project.role;
           // project funding amount
           // comma and space seperated technologies          
           const technologies = project.technologies.join(', ');

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
+  <title>Project Details</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -47,6 +47,23 @@
     }
     #contributionList ul{
       list-style-type: disc;
+    }
+    #projectList ul li{
+      /* padding: 1px; */
+      border-bottom: 1px solid #ccc;
+      height: 50px;
+      margin: 0;
+    }
+    /* make the a element to fill the entire li */
+    #projectList ul li a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    #projectList ul li:hover{
+      background-color: #F9F9F9;
+      cursor: pointer;
+      transition: 0.5s;
     }
 
   </style>
@@ -118,7 +135,10 @@
 
           <div class="col-lg-8 portfolio-info project-details">
             <h2 id="projectTitle"></h2>
-            <hr>
+            <hr>            
+            <div style="font-weight: bold; font-style: italic;" class="text-muted">Role: <span id="projectRole"></span></div>
+
+            <br>
             <div id="projectDescription"></div>
             <br>
             <div id="technologies"></div>
