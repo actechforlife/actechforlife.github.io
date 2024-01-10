@@ -255,8 +255,7 @@
             ],
             "outcome": "The project has produced an open-source ICD coder, poised to significantly reduce coding time, with my ongoing commitment to optimize its use.",
             "challenges": "Managing the dataset presented a significant challenge, necessitating innovative strategies for information extraction and model-friendly representation."
-        }
-        ,
+        },
         {
             "title": "Skin Lesion Detection and Classification",
             "type": "Industry",
@@ -284,8 +283,7 @@
             ],
             "outcome": "Our initial accuracy on the binary classification task reached 92%, and we are actively working on enhancing the model's performance while expanding the number of classes.",
             "challenges": "Several artifacts in the dataset require removal. Our initial approach involved using cropping to mitigate artifacts, and we aim to explore alternative approaches in future iterations."
-        }
-        ,
+        },
         {
             "title": "Detection of LVI from WSI using Deep Learning Methods",
             "type": "Industry",
@@ -314,8 +312,7 @@
             ],
             "outcome": "Our developed platform can identify the presence of LVI in WSI images with 95% accuracy. Currently, we are integrating the model inference into a report generation framework.",
             "challenges": "The size of each Whole Slide Image is significantly large; therefore, we implemented a slicing strategy to process each image."
-        }
-        ,
+        },
         {
             "title": "No-Code Low-Code AutoML Platform for Medical AI Applications",
             "type": "Industry",
@@ -349,8 +346,7 @@
             ],
             "outcome": "The current outcomes include the CSV data cleaning module, and the low-code module is currently under development.",
             "challenges": "The main challenge in this project is the limited manpower availability. We are actively seeking solutions to address this issue once the funding is secured."
-        }
-        ,
+        },
         {
             "title": "Denial of Service Attack Detection",
             "type": "Industry",
@@ -376,8 +372,7 @@
             ],
             "outcome": "Provided a parameter list for more efficient model development, achieving an accuracy of over 90% in the initial phase.",
             "challenges": "The primary challenge in this project was working with an unfinished hardware device. To address this, we developed a simulator to generate data based on open-source dataset specifications, such as the CIC-IDS2017 dataset, and the specifications of the hardware device."
-        }
-        ,
+        },
         {
             "title": "Diagnoses of Multiple Sclerosis Using Deep Learning Methods",
             "type": "Research",
@@ -405,7 +400,6 @@
             "outcome": "Developed five models for comparison, with our best model achieving over 82% accuracy.",
             "challenges": "While the project had a flexible timeline, being the sole member working on it required me to invest extended hours in the lab to ensure task completion."
         },
-        
         {
             "title": "Survey of Continual Learning Frameworks",
             "type": "Research",
@@ -428,7 +422,6 @@
             "outcome": "Although the collaborative project did not materialize, the extensive survey provided invaluable insights into the diverse landscape of continual learning frameworks and their potential applications across various disciplines. This experience enhanced my knowledge and understanding of the evolving field.",
             "challenges": "The primary challenge encountered during this project was the vast amount of materials to survey. Navigating through numerous papers and synthesizing relevant information demanded meticulous attention to detail and a comprehensive understanding of the subject matter."
         },
-        
         {
             "title": "Trend Analysis in Utility Pattern Mining",
             "type": "Research",
@@ -447,7 +440,7 @@
                 "Java",
                 "SQL"
             ],
-            "role":"Ph.D Student",
+            "role": "Ph.D Student",
             "contribution": [
                 "Surveyed and tabulated many utility pattern mining publications",
                 "proposed and designed mining algorithms.",
@@ -533,6 +526,44 @@
             "title": "Award of Outstanding Students",
             "type": "National Chiao Tung University",
             "year": "2018"
+        }
+    ],
+    "Referees": [
+        {
+            "name": "Vincent S. Tseng",
+            "affiliation": "National Yang Ming Chiao Tung University",
+            "contact": {
+                "email": "vtseng@cs.nctu.edu.tw",
+                "phone": "",
+                "webpage": "https://people.cs.nycu.edu.tw/~vtseng/"
+            },
+            "comment": "I know Acquah Hackman as a very hardworking individual.",
+            "img_url": "https://people.cs.nycu.edu.tw/~vtseng/teacher13.jpg",
+            "type": "Professional"
+        },
+        {
+            "name": "Yu Huang",
+            "affiliation": "University of Florida",
+            "contact": {
+                "email": "huanyu@ufl.edu",
+                "phone": "",
+                "webpage": "https://yuvisu.github.io/"
+            },
+            "comment": "something true and nice about Acquah",
+            "img_url": "https://yuvisu.github.io/assets/img/prof_pic.jpg",
+            "type": "Professional"
+        },
+        {
+            "name": "Benny",
+            "affiliation": "University of Florida",
+            "contact": {
+                "email": "huanyu@ufl.edu",
+                "phone": "",
+                "webpage": "https://yuvisu.github.io/"
+            },
+            "comment": "I know Acquah Hackman as a very hardworking individual.",
+            "img_url": "https://yuvisu.github.io/assets/img/prof_pic.jpg",
+            "type": "Professional"
         }
     ]
 }

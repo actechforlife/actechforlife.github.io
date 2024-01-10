@@ -417,7 +417,8 @@
             <div class="card" style="height: 16em; overflow-y: auto;">
               <div class="card-body">
                 <h5 class="card-title">{{project.title}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted" style="font-style: italic;"><small>{{project.role}}</small></h6>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-style: italic;"><small>{{project.role}}</small>
+                </h6>
                 <p class="card-text">{{truncateDescription(project.description)}}</p>
                 <div class="tags">
                   <span class="badge badge-info text-dark"
@@ -435,13 +436,56 @@
         </div>
         <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
           <p class="text-center"><a href="portfolio-details.html?project_index=0">More Projects</a></p>
+          <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5JO4WNL-1FJyq3Djg9E5eW6jP6eHh2nC7Qwu12OZjUg"></script> -->
+        </div>
+
+      </div>
+    </section>
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Referees</h2>
+          <!-- <p>For your reference</p> -->
+        </div>
+
+        <div
+          class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper" id="swiper-wrapper-3ac94e8215f27482" aria-live="off"
+            style="transform: translate3d(-1822px, 0px, 0px); transition-duration: 0ms;">
+
+            <div v-for="ref in resume.Referees" class="swiper-slide swiper-slide-next" data-swiper-slide-index="4"
+              style="width: 283.667px; margin-right: 20px;" role="group" aria-label="5 / 5">
+              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  {{ref.comment}}
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img :src="ref.img_url" class="testimonial-img" alt="">
+                <h3>{{ref.name}}</h3>
+                <h4>{{ref.affiliation}}</h4>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div
+            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span
+              class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span
+              class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span
+              class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+              aria-label="Go to slide 4" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 5"></span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
 
       </div>
     </section>
 
     <!-- ======= Testimonials Section ======= -->
-    
+
 
   </main><!-- End #main -->
 
