@@ -546,23 +546,23 @@
             "affiliation": "University of Florida",
             "contact": {
                 "email": "huanyu@ufl.edu",
-                "phone": "",
+                "phone": "7187552887",
                 "webpage": "https://yuvisu.github.io/"
             },
-            "comment": "something true and nice about Acquah",
+            "comment": "Acquah is a well-trained computer scientist with a strong background in AI and data mining. His ability to rapidly acquire and apply new techniques and knowledge is truly noteworthy. Moreover, his affable nature makes him a pleasure to interact with, fostering effective communication and collaboration among peers and colleagues.",
             "img_url": "https://yuvisu.github.io/assets/img/prof_pic.jpg",
             "type": "Professional"
         },
         {
-            "name": "Benny",
-            "affiliation": "University of Florida",
+            "name": "Andy Wei-Ge Chen",
+            "affiliation": "Department of Otorhinolaryngology, Changhua Christian Hospital",
             "contact": {
-                "email": "huanyu@ufl.edu",
+                "email": "169277@cch.org.tw",
                 "phone": "",
-                "webpage": "https://yuvisu.github.io/"
+                "webpage": "https://scholar.google.com.tw/citations?user=n7YI3rkAAAAJ&hl=zh-TW"
             },
-            "comment": "I know Acquah Hackman as a very hardworking individual.",
-            "img_url": "https://yuvisu.github.io/assets/img/prof_pic.jpg",
+            "comment": "",
+            "img_url": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=n7YI3rkAAAAJ&citpid=2",
             "type": "Professional"
         }
     ]
