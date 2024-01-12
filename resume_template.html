@@ -38,9 +38,11 @@
                     <!-- Repeat this section for each job entry -->
                     {% for exp in resume["Experience"] %}
                     <div class="job-entry">
+                        <div style="font-weight: bold;">
                         <span class="job-title">{{ exp["position"] }}</span> -
                         <span class="job-company">{{ exp["company"] }}</span>
                         <span class="job-date">{{ exp["duration"] }}</span>
+                        </div>
                         <ul>
                             {% for responsibility in exp["responsibilities"] %}
                             <li>{{ responsibility }}</li>
