@@ -1,0 +1,36 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ff0066;
+}
+
+.summary {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li, .projects li {
+    margin-bottom: 10px;
+}
+
+.awards, .publications, .referees {
+    margin-top: 20px;
+}
+
+.referees .referee {
+    margin-bottom: 40px;
+}

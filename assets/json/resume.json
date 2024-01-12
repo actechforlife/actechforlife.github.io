@@ -194,7 +194,7 @@
                 "Implemented FastAPI for integration into the hospital's health information system.",
                 "Drafted and wrote over 50% of the research manuscript."
             ],
-            "outcome": "The best model's IPU iOS score is 0.8503. We integrated the model into the hospital to improve patient care. Our manuscript was accepted for publication.",
+            "outcome": "The best model's I0U score is 0.8503. We integrated the model into the hospital to improve patient care. Our manuscript was accepted for publication.",
             "challenges": "One of the main challenges is that the segmentation output has a condition we referred to as broken edges in some cases. To address this problem, we developed an edge-filling algorithm."
         },
         {
