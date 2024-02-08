@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Internationalization</title>
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Vue-i18n CDN (Standalone Version) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue-i18n@8/dist/vue-i18n.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ getName() }}</p>
+        <p>{{ $t('greeting') }}</p>
+        <button @click="switchLanguage('en')">English</button>
+        <button @click="switchLanguage('zh')">Chinese</button>
+        <p>
+
+            {{getDescription()}}
+        </p>
+        <p>
+            {{getAboutme()}}
+        </p>
+    </div>
+
+    <script>
+        // Set up Vue-i18n
+        Vue.use(VueI18n);
+        // Get the default language of the user's browser
+        const defaultLanguage = navigator.language || navigator.userLanguage;
+
+        // Extract the language code (e.g., 'en', 'fr', 'es')
+        const languageCode = defaultLanguage.split('-')[0];
+        console.log(languageCode);
+
+        // Define supported locales
+        const supportedLocales = ['en', 'zh']; // Add all supported locales
+
+        // Set the default language if it's supported; otherwise, fallback to a default locale
+        const defaultLocale = supportedLocales.includes(languageCode) ? languageCode : 'en';
+
+        const i18n = new VueI18n({
+            locale: defaultLocale, // default locale
+            fallbackLocale: 'en', // fallback locale
+            messages: {
+                en: {
+                    // English translations
+                    //load greetings from resume.json {{}}
+                    greeting: 'Hello!',
+                },
+                ch: {
+                    //chinese translations
+                    greeting: '你好！'
+                }
+            },
+        });
+
+        new Vue({
+            el: '#app',
+            data: {
+                resume: {}
+            },
+            i18n,
+            mounted() {
+                this.loadResume();
+            },
+            methods: {
+                switchLanguage(locale) {
+                    this.$i18n.locale = locale;
+                },
+
+
+                async loadResume() {
+                    try {
+                        const response = await fetch('assets/json/resume.json');
+                        this.resume = await response.json();
+
+                        // Now that resume data is available, handle project details
+                        this.handleProjectDetails();
+                    } catch (error) {
+                        console.error('Error loading resume:', error);
+                    }
+                },
+                getName() {
+                    if (this.resume && this.resume.Summary) {
+                        switch (this.$i18n.locale) {
+                            case 'en':
+                                return this.resume.Summary.fname || '';
+                            case 'zh':
+                                return this.resume.Summary.chinesename || this.resume.Summary.fname || '';
+                            default:
+                                return this.resume.Summary.fname || '';
+                        }
+                    }
+                    return '';
+                },
+
+                getDescription() {
+                    // Return the description based on the current locale
+                    if (this.resume && this.resume.Summary) {
+                        switch (this.$i18n.locale) {
+                            case 'en':
+                                return this.resume.Summary.description;                            
+                            case 'zh':
+                                // Add support for Chinese description if available
+                                return this.resume.Summary.chinesedescription || this.resume.Summary.description;
+                            default:
+                                return this.resume.Summary.description;
+                        }
+                    }
+                    return '';
+                },
+                getAboutme() {
+                    if (this.resume && this.resume.Summary) {
+                        // Return the description based on the current locale                    
+                        switch (this.$i18n.locale) {
+                            case 'en':
+                                return this.resume.Summary.aboutme;
+                            case 'zh':
+                                // Add support for Chinese description if available
+                                return this.resume.Summary.chineseaboutme || this.resume.Summary.description;
+                            default:
+                                return this.resume.Summary.aboutme;
+                        }
+                    }
+                    return '';
+                },
+                handleProjectDetails() {
+                    // Handle project details here
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

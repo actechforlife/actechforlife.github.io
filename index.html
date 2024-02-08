@@ -25,7 +25,10 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Vue.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <!-- Vue-i18n CDN (Standalone Version) -->
+  <script src="https://cdn.jsdelivr.net/npm/vue-i18n@8/dist/vue-i18n.js"></script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -55,350 +58,350 @@
 </head>
 
 <body>
-  <!-- <div id="app"> -->
+  <div id="app">
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
 
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Acquah Hackman</a></h1>
-        <div class="social-links mt-3 text-center">
-          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <div class="profile">
+          <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+          <h1 class="text-light"><a href="index.html">Acquah Hackman</a></h1>
+          <div class="social-links mt-3 text-center">
+            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-          <a href="https://scholar.google.com/citations?hl=en&user=WHBHN70AAAAJ" target="_blank" class="google-plus"><i
-              class="bx bxl-google"></i></a>
-          <a href="https://www.linkedin.com/in/acquah-hackman" target="_blank" class="linkedin"><i
-              class="bx bxl-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=WHBHN70AAAAJ" target="_blank"
+              class="google-plus"><i class="bx bxl-google"></i></a>
+            <a href="https://www.linkedin.com/in/acquah-hackman" target="_blank" class="linkedin"><i
+                class="bx bxl-linkedin"></i></a>
+          </div>
         </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>{{ $t('home') }}</span></a></li>
+            <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>{{ $t('about') }}</span></a></li>
+            <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>{{ $t('skills') }}</span></a>
+            <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>{{ $t('resume') }}</span></a></li>
+            <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                <span>{{ $t('projects') }}</span></a></li>
+            <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a> -->
+            </li>
+            <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a> -->
+            </li>
+          </ul>
+        </nav><!-- .nav-menu -->
       </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="hero-container" data-aos="fade-in">
+        <h1>{{getName()}}</h1>
+        <p>I'm <span class="typed"
+            data-typed-items="a Data Science Enthusiast, a MLOps, an Educator, an Explorer"></span>
+        </p>
+      </div>
+    </section><!-- End Hero -->
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Skills</span></a>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
-          </li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Projects</span></a></li>
-          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a> -->
-          </li>
-          <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a> -->
-          </li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Acquah Hackman</h1>
-      <p>I'm <span class="typed" data-typed-items="a Data Science Enthusiast, a MLOps, an Educator, an Explorer"></span>
-      </p>
-    </div>
-  </section><!-- End Hero -->
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
 
-  <main id="main">
+          <div class="section-title">
+            <div>
+              <h2>About Me</h2>
+              <p>Greetings! I'm Dr. Hackman, a computer science enthusiast with an insatiable curiosity for data
+                science.
+                I obtained my Ph.D. degree from National Chiao Tung University, where I also completed a one-year
+                postdoc
+                fellowship. For both my Ph.D. and fellowship, I was supervised by <a
+                  href="https://people.cs.nycu.edu.tw/~vtseng/" target="_blank" rel="noopener noreferrer">Prof. Vincent
+                  S.
+                  Tseng</a>. Prior to this, I earned my master's in computer science from Yuan Ze University and my
+                bachelor's in computer science from The University of The Gambia.</p>
+              <p>My Ph.D. dissertation is titled <em>A Study on Trend Analysis in High Utility Itemset Mining.</em> My
+                research interests include data mining, machine learning, medical AI, deep learning, generative AI, and
+                data analytics. Currently, my research is focused on the medical field, aligning with my current job
+                position. In this role, I aim to develop medical AI models that can make a positive impact on the
+                healthcare sector.</p>
+            </div>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
 
-        <div class="section-title">
-          <div>
-            <h2>About Me</h2>
-            <p>Greetings! I'm Dr. Hackman, a computer science enthusiast with an insatiable curiosity for data
-              science.
-              I obtained my Ph.D. degree from National Chiao Tung University, where I also completed a one-year
-              postdoc
-              fellowship. For both my Ph.D. and fellowship, I was supervised by <a
-                href="https://people.cs.nycu.edu.tw/~vtseng/" target="_blank" rel="noopener noreferrer">Prof. Vincent
-                S.
-                Tseng</a>. Prior to this, I earned my master's in computer science from Yuan Ze University and my
-              bachelor's in computer science from The University of The Gambia.</p>
-            <p>My Ph.D. dissertation is titled <em>A Study on Trend Analysis in High Utility Itemset Mining.</em> My
-              research interests include data mining, machine learning, medical AI, deep learning, generative AI, and
-              data analytics. Currently, my research is focused on the medical field, aligning with my current job
-              position. In this role, I aim to develop medical AI models that can make a positive impact on the
-              healthcare sector.</p>
           </div>
 
-
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Data Scientist</h3>
-            <p class="fst-italic">
-              Having accumulated more than a year and a half of hands-on experience in the field of data science, I
-              possess a profound comprehension of the data science pipeline, along with expertise in the tools and
-              techniques integral to this domain.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong><span
-                      v-if="resume.Summary">{{resume.Summary.birthday}}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong><span v-if="resume.Summary"><a
-                        href="https://actechforlife.github.io/">{{resume.Summary.webpage}}</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong><span
-                      v-if="resume.Summary">{{resume.Summary.phone}}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong><span
-                      v-if="resume.Summary">{{resume.Summary.city}}</span></li>
-                </ul>
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Data Scientist</h3>
+              <p class="fst-italic">
+                Having accumulated more than a year and a half of hands-on experience in the field of data science, I
+                possess a profound comprehension of the data science pipeline, along with expertise in the tools and
+                techniques integral to this domain.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong><span
+                        v-if="resume.Summary">{{resume.Summary.birthday}}</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong><span v-if="resume.Summary"><a
+                          href="https://actechforlife.github.io/">{{resume.Summary.webpage}}</a></span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong><span
+                        v-if="resume.Summary">{{resume.Summary.phone}}</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong><span
+                        v-if="resume.Summary">{{resume.Summary.city}}</span></li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span v-if="resume.Summary">37</span>
+                    </li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong v-if="resume.Summary">
+                      <span>Doctor</span>
+                    </li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span
+                        v-if="resume.Summary">{{resume.Summary.email}}</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Languages:</strong>
+                      <span>
+                        <ul style="line-height: .7em;">
+                          <li>English <span class="proficiency">★★★★★</span><span class="stars"></span></li>
+                          <li>Chinese <span class="proficiency">★★★</span><span class="stars">★★</span></li>
+                        </ul>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span v-if="resume.Summary">37</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong v-if="resume.Summary">
-                    <span>Doctor</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span
-                      v-if="resume.Summary">{{resume.Summary.email}}</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Languages:</strong>
-                    <span>
-                      <ul style="line-height: .7em;">
-                        <li>English <span class="proficiency">★★★★★</span><span class="stars"></span></li>
-                        <li>Chinese <span class="proficiency">★★★</span><span class="stars">★★</span></li>
-                      </ul>
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              <p>
+                <b>Current Position:</b> Data Scientist at <a href="https://www.cch.org.tw/home.aspx"
+                  target="_blank">Changhua Christian Hospital</a>
+              </p>
             </div>
-            <p>
-              <b>Current Position:</b> Data Scientist at <a href="https://www.cch.org.tw/home.aspx"
-                target="_blank">Changhua Christian Hospital</a>
+          </div>
+
+        </div>
+      </section><!-- End About Section -->
+
+      <!-- ======= Facts Section ======= -->
+      <section id="facts" class="facts">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Facts</h2>
+            <p>Presented here is a concise overview of my projects, publications, accolades, and public presentations.
             </p>
           </div>
-        </div>
 
-      </div>
-    </section><!-- End About Section -->
+          <div class="row no-gutters">
 
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Presented here is a concise overview of my projects, publications, accolades, and public presentations.
-          </p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-journal-bookmark"></i>
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
-                class="purecounter">6</span>
-              <p><strong>Publications</strong>, Journal and Conferences</p>
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+              <div class="count-box">
+                <i class="bi bi-journal-bookmark"></i>
+                <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+                  class="purecounter">6</span>
+                <p><strong>Publications</strong>, Journal and Conferences</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-calendar2-week"></i>
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
-                class="purecounter">10</span>
-              <p><strong>Projects</strong> from postdoc to date. A period of 2years.</p>
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="count-box">
+                <i class="bi bi-calendar2-week"></i>
+                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+                  class="purecounter">10</span>
+                <p><strong>Projects</strong> from postdoc to date. A period of 2years.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-award-fill"></i>
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
-                class="purecounter">3</span>
-              <p><strong>Awards</strong> of grants and archivements </p>
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+              <div class="count-box">
+                <i class="bi bi-award-fill"></i>
+                <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
+                  class="purecounter">3</span>
+                <p><strong>Awards</strong> of grants and archivements </p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-chat-text-fill"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
-                class="purecounter">5</span>
-              <p><strong>Public presentation</strong> rerum asperiores dolor</p>
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+              <div class="count-box">
+                <i class="bi bi-chat-text-fill"></i>
+                <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                  class="purecounter">5</span>
+                <p><strong>Public presentation</strong> rerum asperiores dolor</p>
+              </div>
             </div>
+
           </div>
 
         </div>
+      </section><!-- End Facts Section -->
 
-      </div>
-    </section><!-- End Facts Section -->
+      <!-- ======= Skills Section ======= -->
+      <section id="skills" class="skills section-bg">
+        <div class="container">
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <div class="row" data-aos="fade-up">
-            <h2>Professional Skills</h2>
-            <p>Displayed below are skills I have acquired through projects, research, or proactive exploration of
-              emerging
-              technologies.</p>
+          <div class="section-title">
+            <div class="row" data-aos="fade-up">
+              <h2>Professional Skills</h2>
+              <p>Displayed below are skills I have acquired through projects, research, or proactive exploration of
+                emerging
+                technologies.</p>
+            </div>
           </div>
-        </div>
-        <h3>Programming Languages</h3>
+          <h3>Programming Languages</h3>
 
-        <div class="row skills-content">
+          <div class="row skills-content">
 
-          <div class="col-lg-6" data-aos="fade-up">
-            <!-- first column. half skills length here = 3 -->
-            <div class="progress" v-for="(skill, index) in resume.Skills.Programming.slice(0, 3)">
-              <span class="skill">{{ skill.name }} <i class="val">{{ skill.competence_level }}%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" :aria-valuenow="skill.competence_level" aria-valuemin="0"
-                  aria-valuemax="100">
+            <div class="col-lg-6" data-aos="fade-up">
+              <!-- first column. half skills length here = 3 -->
+              <div class="progress" v-for="(skill, index) in resume.Skills.Programming.slice(0, 3)">
+                <span class="skill">{{ skill.name }} <i class="val">{{ skill.competence_level }}%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" :aria-valuenow="skill.competence_level" aria-valuemin="0"
+                    aria-valuemax="100">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <!-- second column remaining half here-->
-            <div class="progress" v-for="(skill, index) in resume.Skills.Programming.slice(3)">
-              <span class="skill">{{ skill.name }} <i class="val">{{ skill.competence_level }}%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" :aria-valuenow="skill.competence_level" aria-valuemin="0"
-                  aria-valuemax="100">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <!-- second column remaining half here-->
+              <div class="progress" v-for="(skill, index) in resume.Skills.Programming.slice(3)">
+                <span class="skill">{{ skill.name }} <i class="val">{{ skill.competence_level }}%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" :aria-valuenow="skill.competence_level" aria-valuemin="0"
+                    aria-valuemax="100">
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
 
-        </div>
-
-        <h3>{{resume.Skills.Tech_and_Tools.title}}</h3>
-        <ul>
-          <li>{{resume.Skills.Tech_and_Tools.tech.title}}:
-            <ul>
-              <li v-for="(tech_skill, index) in resume.Skills.Tech_and_Tools.tech.items" v-html="tech_skill"></li>
-            </ul>
-          </li>
-          <li>{{resume.Skills.Tech_and_Tools.tools.title}}:
-            <ul>
-              <li v-for="(tools_skill, index) in resume.Skills.Tech_and_Tools.tools.items" v-html="tools_skill"></li>
-            </ul>
-          </li>
-        </ul>
-
-
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>For a brief overview of my resume, please refer to the content below. Click <a href="resume.html">here</a>
-            to
-            download and view the complete resume.</p>
-        </div>
-
-        <div class="row">
-          <!-- left column -->
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Acquah Hackman</h4>
-              <p><em>Hardworking, quick learner, and highly motivated to succeed in every endeavor.</em></p>
+          <h3>{{resume.Skills.Tech_and_Tools.title}}</h3>
+          <ul>
+            <li>{{resume.Skills.Tech_and_Tools.tech.title}}:
               <ul>
-                <li>Changhua City, Changhua, TW</li>
-                <li>(+886) 988-161-854</li>
-                <li><a href="mailto:actechforlife@gmail.com">actechforlife@gmail.com</a></li>
+                <li v-for="(tech_skill, index) in resume.Skills.Tech_and_Tools.tech.items" v-html="tech_skill"></li>
               </ul>
-            </div>
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4 v-if="this.resume?.Education?.doctorate?.title">{{resume.Education.doctorate.title}}</h4>
-              <h5 v-if="this.resume?.Education?.doctorate?.from && this.resume?.Education?.doctorate?.to">
-                {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}
-              </h5>
-              <p v-if="this.resume?.Education?.doctorate?.university && this.resume?.Education?.doctorate?.address">
-                <em>{{resume.Education.doctorate.university}}, {{resume.Education.doctorate.address}}</em>
-              </p>
-              <p v-if="this.resume?.Education?.doctorate?.dissertation">
-                <strong><em>Dissertation Title:</em></strong> {{resume.Education.doctorate.dissertation}}
-              </p>
-              <p v-if="this.resume?.Education?.doctorate?.degree">Degree: {{resume.Education.doctorate.degree}}</p>
-            </div>
-
-            <div class="resume-item" v-if="resume.Education?.masters">
-              <h4>{{resume.Education.masters.title}}</h4>
-              <h5>{{resume.Education.masters.from}} - {{resume.Education.masters.to}}</h5>
-              <p><em>{{resume.Education.masters.university}}, {{resume.Education.masters.address}}</em></p>
-              <p v-if="resume.Education.masters.thesis"><strong><em>Thesis Title:</em></strong>
-                {{resume.Education.masters.thesis}}</p>
-              <p>Degree: {{resume.Education.masters.degree}}</p>
-            </div>
-
-            <div class="resume-item" v-if="resume.Education?.bachelors">
-              <h4>{{resume.Education.bachelors.title}}</h4>
-              <h5>{{resume.Education.bachelors.from}} - {{resume.Education.bachelors.to}}</h5>
-              <p><em>{{resume.Education.bachelors.university}}, {{resume.Education.bachelors.address}}</em></p>
-              <p v-if="resume.Education.bachelors.achievement"><strong><em>Achievement:</em></strong>
-                {{resume.Education.bachelors.achievement}}</p>
-              <p>Degree: {{resume.Education.bachelors.degree}}</p>
-            </div>
-
-          </div>
-          <!-- right column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-
-            <div class="resume-item" v-for="(exp, index) in resume.Experience" v-if="index < 2">
-              <h4>{{exp.position}}</h4>
-              <h5>{{exp.duration}}</h5>
-              <p><em>{{exp.company}}, {{exp.address}}</em></p>
-              <p><strong><em>Summary</em></strong>: {{exp.summary}}<br>
-                <a href="resume.html"><small><em>details</em> >></small></a>
-              </p>
-            </div>
-            <h3 class="resume-title">Recent Publications</h3>
-            <div class="resume-item">
+            </li>
+            <li>{{resume.Skills.Tech_and_Tools.tools.title}}:
               <ul>
-                <li v-for="(pub, index) in resume.Publications" v-if="index < 5">{{pub.title}}</li>
+                <li v-for="(tools_skill, index) in resume.Skills.Tech_and_Tools.tools.items" v-html="tools_skill"></li>
               </ul>
+            </li>
+          </ul>
+
+
+
+        </div>
+      </section><!-- End Skills Section -->
+
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Resume</h2>
+            <p>For a brief overview of my resume, please refer to the content below. Click <a
+                href="resume.html">here</a>
+              to
+              download and view the complete resume.</p>
+          </div>
+
+          <div class="row">
+            <!-- left column -->
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>{{fullName}}({{resume.Summary.chinesename}})</h4>
+                <p><em>{{getDescription()}}</em></p>
+                <ul>
+                  <li>Changhua City, Changhua, TW</li>
+                  <li>(+886) 988-161-854</li>
+                  <li><a href="mailto:actechforlife@gmail.com">actechforlife@gmail.com</a></li>
+                </ul>
+              </div>
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4 v-if="this.resume?.Education?.doctorate?.title">{{resume.Education.doctorate.title}}</h4>
+                <h5 v-if="this.resume?.Education?.doctorate?.from && this.resume?.Education?.doctorate?.to">
+                  {{resume.Education.doctorate.from}} - {{resume.Education.doctorate.to}}
+                </h5>
+                <p v-if="this.resume?.Education?.doctorate?.university && this.resume?.Education?.doctorate?.address">
+                  <em>{{resume.Education.doctorate.university}}, {{resume.Education.doctorate.address}}</em>
+                </p>
+                <p v-if="this.resume?.Education?.doctorate?.dissertation">
+                  <strong><em>Dissertation Title:</em></strong> {{resume.Education.doctorate.dissertation}}
+                </p>
+                <p v-if="this.resume?.Education?.doctorate?.degree">Degree: {{resume.Education.doctorate.degree}}</p>
+              </div>
+
+              <div class="resume-item" v-if="resume.Education?.masters">
+                <h4>{{resume.Education.masters.title}}</h4>
+                <h5>{{resume.Education.masters.from}} - {{resume.Education.masters.to}}</h5>
+                <p><em>{{resume.Education.masters.university}}, {{resume.Education.masters.address}}</em></p>
+                <p v-if="resume.Education.masters.thesis"><strong><em>Thesis Title:</em></strong>
+                  {{resume.Education.masters.thesis}}</p>
+                <p>Degree: {{resume.Education.masters.degree}}</p>
+              </div>
+
+              <div class="resume-item" v-if="resume.Education?.bachelors">
+                <h4>{{resume.Education.bachelors.title}}</h4>
+                <h5>{{resume.Education.bachelors.from}} - {{resume.Education.bachelors.to}}</h5>
+                <p><em>{{resume.Education.bachelors.university}}, {{resume.Education.bachelors.address}}</em></p>
+                <p v-if="resume.Education.bachelors.achievement"><strong><em>Achievement:</em></strong>
+                  {{resume.Education.bachelors.achievement}}</p>
+                <p>Degree: {{resume.Education.bachelors.degree}}</p>
+              </div>
+
             </div>
-          </div>
-          <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
-            <p class="text-center"><a href="resume.html">Click for more</a></p>
+            <!-- right column -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Professional Experience</h3>
+
+              <div class="resume-item" v-for="(exp, index) in resume.Experience" v-if="index < 2">
+                <h4>{{exp.position}}</h4>
+                <h5>{{exp.duration}}</h5>
+                <p><em>{{exp.company}}, {{exp.address}}</em></p>
+                <p><strong><em>Summary</em></strong>: {{exp.summary}}<br>
+                  <a href="resume.html"><small><em>details</em> >></small></a>
+                </p>
+              </div>
+              <h3 class="resume-title">Recent Publications</h3>
+              <div class="resume-item">
+                <ul>
+                  <li v-for="(pub, index) in resume.Publications" v-if="index < 5">{{pub.title}}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
+              <p class="text-center"><a href="resume.html">Click for more</a></p>
+            </div>
+
           </div>
 
         </div>
+      </section><!-- End Resume Section -->
 
-      </div>
-    </section><!-- End Resume Section -->
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
+          <div class="section-title">
+            <h2>Projects Portfolio</h2>
+            <p>Explore a curated list of projects I have contributed to, detailing my roles and project outcomes.</p>
+          </div>
 
-        <div class="section-title">
-          <h2>Projects Portfolio</h2>
-          <p>Explore a curated list of projects I have contributed to, detailing my roles and project outcomes.</p>
-        </div>
-
-        <!-- <div class="row" data-aos="fade-up">
+          <!-- <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -409,102 +412,102 @@
           </div>
         </div> -->
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <!-- create a card -->
-          <div v-for="(project,index) in resume.Projects" v-if="index < 6"
-            class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="card" style="height: 16em; overflow-y: auto;">
-              <div class="card-body">
-                <h5 class="card-title">{{project.title}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted" style="font-style: italic;"><small>{{project.role}}</small>
-                </h6>
-                <p class="card-text">{{truncateDescription(project.description)}}</p>
-                <div class="tags">
-                  <span class="badge badge-info text-dark"
-                    style="background-color: rgb(214, 213, 213); margin: 3px;padding: 2px;border-radius: 3px;"
-                    v-for="tech in project.technologies">{{ tech }}</span>
+            <!-- create a card -->
+            <div v-for="(project,index) in resume.Projects" v-if="index < 6"
+              class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="card" style="height: 16em; overflow-y: auto;">
+                <div class="card-body">
+                  <h5 class="card-title">{{project.title}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted" style="font-style: italic;"><small>{{project.role}}</small>
+                  </h6>
+                  <p class="card-text">{{truncateDescription(project.description)}}</p>
+                  <div class="tags">
+                    <span class="badge badge-info text-dark"
+                      style="background-color: rgb(214, 213, 213); margin: 3px;padding: 2px;border-radius: 3px;"
+                      v-for="tech in project.technologies">{{ tech }}</span>
+                  </div>
+                  <a :href="'portfolio-details.html?project_index=' + index" class="card-link btn"
+                    style="position: absolute; bottom: 0px; right: 0px; border: none; background-color: #040B14; color: aliceblue; border-radius: 5px 0px; padding: 3px; font-size: small;">Read
+                    More</a>
+
                 </div>
-                <a :href="'portfolio-details.html?project_index=' + index" class="card-link btn"
-                  style="position: absolute; bottom: 0px; right: 0px; border: none; background-color: #040B14; color: aliceblue; border-radius: 5px 0px; padding: 3px; font-size: small;">Read
-                  More</a>
-
               </div>
             </div>
+
+          </div>
+          <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-center"><a href="portfolio-details.html?project_index=0">More Projects</a></p>
+            <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5JO4WNL-1FJyq3Djg9E5eW6jP6eHh2nC7Qwu12OZjUg"></script> -->
           </div>
 
         </div>
-        <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
-          <p class="text-center"><a href="portfolio-details.html?project_index=0">More Projects</a></p>
-          <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5JO4WNL-1FJyq3Djg9E5eW6jP6eHh2nC7Qwu12OZjUg"></script> -->
-        </div>
+      </section>
+      <section id="testimonials" class="testimonials section-bg">
+        <div class="container">
 
-      </div>
-    </section>
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>This is what my colleagues and supervisors say about me.</p>
-        </div>
-
-        <div
-          class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate"
-          data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper" id="swiper-wrapper-3ac94e8215f27482" aria-live="off"
-            style="transform: translate3d(-1822px, 0px, 0px); transition-duration: 0ms;">
-
-            <div v-for="ref in resume.Referees" class="swiper-slide swiper-slide-next" data-swiper-slide-index="4"
-              style="width: 283.667px; margin-right: 20px;" role="group" aria-label="5 / 5">
-              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  {{ref.comment}}
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img :src="ref.img_url" class="testimonial-img" alt="">
-                <h3>{{ref.name}}</h3>
-                <h4>{{ref.affiliation}}</h4>
-              </div>
-            </div><!-- End testimonial item -->
+          <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>This is what my colleagues and supervisors say about me.</p>
           </div>
+
           <div
-            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span
-              class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span
-              class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span
-              class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
-              aria-label="Go to slide 4" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0"
-              role="button" aria-label="Go to slide 5"></span>
+            class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper" id="swiper-wrapper-3ac94e8215f27482" aria-live="off"
+              style="transform: translate3d(-1822px, 0px, 0px); transition-duration: 0ms;">
+
+              <div v-for="ref in resume.Referees" class="swiper-slide swiper-slide-next" data-swiper-slide-index="4"
+                style="width: 283.667px; margin-right: 20px;" role="group" aria-label="5 / 5">
+                <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{ref.comment}}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <img :src="ref.img_url" class="testimonial-img" alt="">
+                  <h3>{{ref.name}}</h3>
+                  <h4>{{ref.affiliation}}</h4>
+                </div>
+              </div><!-- End testimonial item -->
+            </div>
+            <div
+              class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+              <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span
+                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span
+                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span
+                class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                aria-label="Go to slide 4" aria-current="true"></span><span class="swiper-pagination-bullet"
+                tabindex="0" role="button" aria-label="Go to slide 5"></span>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
           </div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+
         </div>
+      </section>
 
+      <!-- ======= Testimonials Section ======= -->
+
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Acquah</span></strong>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
       </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Acquah</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-  <!-- </div> -->
+    </footer><!-- End  Footer -->
+  </div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -522,6 +525,9 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/resume.js"></script>
+  <!-- <script>
+    
+  </script> -->
 
 </body>
 
