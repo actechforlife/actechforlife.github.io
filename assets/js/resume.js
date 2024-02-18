@@ -138,9 +138,13 @@ truncateDescription(description) {
         // sort projectList onproject.title;
 
         // get the project list and convert to HTML list for display
+        const projecyListElement = document.getElementById('projectList');
+        if (projecyListElement) {
         const projectsHtml = `<ul>${projectList.join('')}</ul>`;
         document.getElementById('projectList').innerHTML = projectsHtml;
-
+      }else{
+        console.log('projectList is not defined');
+      }
 
 
         // Check if project is defined
