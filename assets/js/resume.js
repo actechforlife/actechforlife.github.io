@@ -169,10 +169,10 @@ truncateDescription(description) {
           // challenges
           document.getElementById('challenges').textContent = project.challenges;
         } else {
-          console.error('Project not found in resume data.');
+          console.log('Project not found in resume data.');
         }
       } else {
-        console.error('Resume data not available.');
+        console.log('Resume data not available.');
       }
     }
   }
