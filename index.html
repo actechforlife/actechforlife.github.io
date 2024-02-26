@@ -105,7 +105,8 @@
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
       <div class="hero-container" data-aos="fade-in">
         <h1>{{getName()}}</h1>
-        <p style="font-style: italic; font-size: 1em; font-weight: lighter;">I'm a Data Science Enthusiast, a MLOps, an Educator, an Explorer and a Creator.
+        <p style="font-style: italic; font-size: 1em; font-weight: lighter;">I'm a Data Science Enthusiast, a MLOps, an
+          Educator, an Explorer and a Creator.
         </p>
       </div>
     </section><!-- End Hero -->
@@ -238,13 +239,25 @@
                 <i class="bi bi-chat-text-fill"></i>
                 <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
                   class="purecounter">5</span>
-                <p><strong>Public presentation</strong> rerum asperiores dolor</p>
+                <p><strong>Public presentation</strong> </p>
               </div>
             </div>
 
           </div>
+          <!-- list of public presetnations and invited talks -->
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12">
+              <h3>Public Presentations</h3>
+              <ul>
+                <li v-for="talk in resume.invited_talks" >
+                  {{talk.role}}, 
+                  <span style="font-weight: bold; font-style: italic;">{{talk.title}}</span>,<br>
+                  {{talk.venue}}, {{talk.date}}.
+                </li>
+              </ul>
+            </div>
 
-        </div>
+          </div>
       </section><!-- End Facts Section -->
 
       <!-- ======= Skills Section ======= -->
@@ -319,9 +332,9 @@
             to
             download and view the complete resume.</p> -->
             <p>For a brief overview of my resume, please refer to the content below. Click <a
-              href="resume_generated.pdf">here</a>
-            to
-            download and view the complete resume.</p>
+                href="resume_generated.pdf">here</a>
+              to
+              download and view the complete resume.</p>
           </div>
 
           <div class="row">
@@ -491,10 +504,10 @@
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
           </div>
           <div class="container">
-          <div style="width: 500px;" class="container mt-5" style="background-color: #ccc;">
-            <script type='text/javascript' id='clustrmaps'
-              src='//cdn.clustrmaps.com/map_v2.js?cl=5298d6&w=a&t=tt&d=5JO4WNL-1FJyq3Djg9E5eW6jP6eHh2nC7Qwu12OZjUg&co=ffffff&ct=808080&cmo=9bb7d1&cmn=e54e6b'></script>
-          </div>
+            <div style="width: 500px;" class="container mt-5" style="background-color: #ccc;">
+              <script type='text/javascript' id='clustrmaps'
+                src='//cdn.clustrmaps.com/map_v2.js?cl=5298d6&w=a&t=tt&d=5JO4WNL-1FJyq3Djg9E5eW6jP6eHh2nC7Qwu12OZjUg&co=ffffff&ct=808080&cmo=9bb7d1&cmn=e54e6b'></script>
+            </div>
           </div>
         </div>
       </section>

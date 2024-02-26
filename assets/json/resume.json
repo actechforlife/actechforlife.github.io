@@ -1,5 +1,5 @@
 {
-    "last_update": "1/1/2024",
+    "last_update": "1/02/2024",
     "Summary": {
         "description": "Hardworking, quick learner, and highly motivated to succeed in every endeavor.",
         "chinesedescription": "有责任心，快速学习能力强，有很高的自信心，能够在任何一个项目中取得成功",
@@ -570,6 +570,44 @@
             "comment": "",
             "img_url": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=n7YI3rkAAAAJ&citpid=2",
             "type": "Professional"
+        }
+    ],
+    "invited_talks":[
+        {
+            "event": "2024 AI on Clinical Decision Making and Precision Medicine Forum",
+            "title": "Medical AI: Application and Forecast",
+            "venue": "Forte Hotel Changhua",
+            "date": "2024-03-21",
+            "time": "09:00 - 12:00",
+            "abstract": "",
+            "role":"Keynote 1"
+        },
+        {
+            "event": "Healthcare Expo - Taiwan",
+            "title": "Applications of Large Language Models at Changhua Christian Hospital",
+            "venue": "Nangang International Exhibition Center, Hall1",
+            "date": "2023-12-03",
+            "time": "09:00 - 12:00",
+            "abstract": "",
+            "role":"Public Speech"
+        },
+        {
+            "event": "Weekly General Hospital Seminar",
+            "title": "AI-based Retinal Image Analysis for systemic disease prediction",
+            "venue": "Changhua Christian Hospital",
+            "date": "2023-04-07",
+            "time": "07:45 - 08:00",
+            "abstract": "",
+            "role":"Speech"
+        },
+        {
+            "event": "Departmental Archievement Report",
+            "title": "Privacy Assurance in Medical Large Language Models",
+            "venue": "Nangang International Exhibition Center, Hall1",
+            "date": "2023-07-12",
+            "time": "09:00 - 12:00",
+            "abstract": "",
+            "role":"Lecture"
         }
     ]
 }
