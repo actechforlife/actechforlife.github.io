@@ -232,6 +232,35 @@
             "challenges": "As the sole technical member on the team, overcoming challenges included learning and adapting to new technologies and tools."
         },
         {
+            "title": "Medical Report Generation",
+            "type": "Industry",
+            "description": "Generating patient medical reports is a daily obligation for physicians to track patient progress. Additionally, weekly summaries, including past dates, offer a comprehensive view of the patient's physical condition. Leveraging AI can help free up time for physicians to perform other tasks that contribute to saving the patient, while also aiding in report generation and preserving patient privacy.",
+            "funding": {
+                "by": "Funded by Changhua Christian Hospital",
+                "amount": ""
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2023",
+                "end": "ongoing"
+            },
+            "technologies": [
+                "Python",
+                "Llama-2",
+                "Python-Flask",
+                "FastAPI",
+                "PostgreSQL"
+            ],
+            "role": "Data Scientist, MLOps Engineer",
+            "contribution": [
+                "Data cleaning and preprocessing.",
+                "Developed strategies for notes summarization",
+                "Responsible for the development of the report generation system."                
+            ],
+            "outcome": "AI Powered editor for medical notes writing and summarization.",
+            "challenges": "How do deal with very large medical notes."
+        },
+        {
             "title": "Large Language Model for ICD Coding",
             "type": "Industry",
             "description": "Automation of ICD (International Classification of Diseases) code prediction from medical records. This project aims to fine-tune open-source large language models for predicting ICD codes from medical records. The current manual process of assigning ICD codes to diseases is error-prone and subject to human interpretation.",
