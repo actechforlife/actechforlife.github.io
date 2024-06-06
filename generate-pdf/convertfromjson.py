@@ -38,7 +38,7 @@ with open(css_file_path, 'w') as css_file:
 
 # Convert HTML to PDF
 try:
-    pdfkit.from_file(html_file_path, 'resume_generated.pdf', configuration=config, css=css_file_path)
+    pdfkit.from_file(html_file_path, 'dr_acquah_resume.pdf', configuration=config, css=css_file_path)
 except:
     # print('Error: wkhtmltopdf not found. Please install it.')
     pass

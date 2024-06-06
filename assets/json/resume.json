@@ -1,5 +1,5 @@
 {
-    "last_update": "1/02/2024",
+    "last_update": "06/06/2024",
     "Summary": {
         "description": "Hardworking, quick learner, and highly motivated to succeed in every endeavor.",
         "chinesedescription": "有责任心，快速学习能力强，有很高的自信心，能够在任何一个项目中取得成功",
@@ -124,7 +124,7 @@
         "Programming": [
             {
                 "name": "Python",
-                "competence_level": "90"
+                "competence_level": "95"
             },
             {
                 "name": "Java",
@@ -132,7 +132,7 @@
             },
             {
                 "name": "SQL Database Management (Postgres, MSSQL)",
-                "competence_level": "75"
+                "competence_level": "80"
             },
             {
                 "name": "HTML and CSS",
@@ -152,6 +152,7 @@
             "tech": {
                 "title": "Machine learning and deep learning frameworks",
                 "items": [
+                    "Extensive experience with <b>Open-source Large Language Models</b>.",
                     "Proficient in <b>Scikit-learn</b> for its versatility in machine learning tasks.",
                     "Extensive experience with <b>Tensorflow</b>, leveraging its robust ecosystem for deep learning projects.",
                     "Familiarity with <b>PyTorch</b>, having applied its flexibility and dynamic computational graphs in a few projects for machine learning applications."
@@ -161,6 +162,7 @@
                 "title": "MLOps/DevOps",
                 "items": [
                     "Proficient in <b>Docker</b> for efficient containerization, streamlining deployment workflows.",
+                    "<b>Redis</b> and <b>Celery</b> for backend process execusion and management.",
                     "Experience with <b>Git</b> for version control, ensuring collaborative and organized development processes.",
                     "Working understanding of <b>Kubernetes</b>, utilizing its orchestration capabilities for scalable and resilient deployments.",
                     "Familiarity with <b>Jenkins</b> for implementing robust and automated <b>CI/CD</b> pipelines.",
@@ -172,6 +174,37 @@
         }
     },
     "Projects": [
+        {
+            "title": "Artificial Intelligence-Enabled Digital Pathology Platform",
+            "type": "Industry",
+            "description": "Developed AI and computer vision solutions to alleviate the workload of pathologists, addressing the shortage of experienced professionals in the field. Implemented deep learning algorithms to enhance diagnostic support for pathologists.",
+            "funding": {
+                "by": "Changhua Christian Hospital",
+                "amount": "Not available"
+            },
+            "institution": "Changhua Christian Hospital",
+            "duration": {
+                "start": "2024",
+                "end": "ongoing"
+            },
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "Python-Flask",
+                "OpenCV",
+                "Redis",
+                "Celery"
+            ],
+            "role": "Full Stack Engineer, MLOps",
+            "contribution": [
+                "Developed deep learning models for the platform.",
+                "Designed and implemented the digital pathology architecture.",
+                "Integrated the solution with the existing hospital information system at Changhua Christian Hospital."
+                
+            ],
+            "outcome": "The digital pathology platform has saved the hospital millions of NTD, which would otherwise be spent on similar commercial platforms.",
+            "challenges": "The primary challenge was managing the workload as a single developer. To address this, we prioritized and implemented key features first. Future improvements and additional features will be addressed as more manpower becomes available."
+        },
         {
             "title": "Automatic Segmentation of Membranous Glottal Gap Area with U-Net-based Architecture",
             "type": "Industry",
@@ -487,14 +520,21 @@
         }
     ],
     "Publications": [
-        {
-            "title": "Automatic Segmentation of Membranous Glottal Gap Area with U-Net-based Architecture",
-            "authors": "<b>Acquah Hackman</b>, Chih-Hua Chen, Andy Wei-Ge Chen, Mu-Kuan Chen",
-            "type": "Journal",
-            "publisher_name": "The Laryngoscope",
-            "year": "2023",
-            "role": "first author"
-        },
+    {
+        "title": "基於機器學習方法預測醫院之出院量",
+        "authors": "帆薇徐, 英志 林, <b>克曼哈</b>, 天雄 古 and 佩云 王",
+        "type": "Conference",
+        "publisher_name": "The 41st Symposium on Combinatorial Mathematics and Computational Theory (CMCT 2024)",
+        "year": "2024",
+        "role": "Corresponding Author"
+    },{
+        "title": "Automatic Segmentation of Membranous Glottal Gap Area with U-Net-based Architecture",
+        "authors": "<b>Acquah Hackman</b>, Chih-Hua Chen, Andy Wei-Ge Chen, Mu-Kuan Chen",
+        "type": "Journal",
+        "publisher_name": "The Laryngoscope",
+        "year": "2023",
+        "role": "first author"
+    },
         {
             "title": "Stable High Utility Itemset Mining",
             "authors": "<b>Acquah Hackman</b>, Yu Huang, Philippe Fournier-Viger, Vincent Tseng",
