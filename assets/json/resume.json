@@ -38,7 +38,7 @@
             "degree": "Ph.D.",
             "from": "2015",
             "to": "2021",
-            "dissertation": "A Study of Trend Analysis in High Utility Itemset Mining",
+            "dissertation": "A Study on Trend Analysis in High Utility Itemset Mining",
             "advisor": {
                 "name": "Vincent S. Tseng",
                 "department": "Computer Science"
@@ -51,7 +51,7 @@
             "degree": "MSc.",
             "from": "2012",
             "to": "2014",
-            "thesis": "A Study of Trend Analysis in High Utility Itemset Mining",
+            "thesis": "Analysis of Dynamic Road Situation Data Using Data Warehousing Techniques",
             "advisor": {
                 "name": "Hsiu-Hsen Yao",
                 "department": "Computer Science"
