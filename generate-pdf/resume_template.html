@@ -74,7 +74,13 @@
                     <h2>Skills</h2>
                     <ul class="skills-list">
                         <!-- Add skills here -->
-                        <li>Programming Languages: {{ resume["Skills"]["Programming"]["name"]|join(', ') }}</li>
+                         <li>Soft Skills:{% for x in resume["Skills"]["Soft Skills"]  %}
+                            {{ x }},
+                            {% endfor %}</li>
+                        <li>Programming Languages: 
+                            {% for x in resume["Skills"]["Programming"]  %}
+                            {{ x['name'] }},
+                            {% endfor %}</li>
                         <li>
                             {{ resume["Skills"]["Tech_and_Tools"]["title"] }}:
                             <ul>
@@ -116,7 +122,7 @@
                             <p class="project-contribution"><span class="project-detail-header">Contribution:</span>
                                 {{ project["contribution"]|join(' ') }}</p>
                             <p class="project-outcome"><span class="project-detail-header">Outcome:</span>
-                                {{ project["outcome"] }}</p>
+                                {{ project["outcome"]|safe }}</p>
                         </li>
                         {% endfor %}
                     </ul>

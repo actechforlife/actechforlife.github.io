@@ -1,10 +1,10 @@
 {
-    "last_update": "06/06/2024",
+    "last_update": "07/16/2024",
     "Summary": {
         "description": "Hardworking, quick learner, and highly motivated to succeed in every endeavor.",
         "chinesedescription": "有责任心，快速学习能力强，有很高的自信心，能够在任何一个项目中取得成功",
-        "aboutme":"some content about me",
-        "chineseaboutme":"关于我",
+        "aboutme": "some content about me",
+        "chineseaboutme": "关于我",
         "introduction": "Greetings! I'm Dr. Hackman, a computer science enthusiast with an insatiable curiosity for data science. I obtained my Ph.D. degree from National Chiao Tung University, where I also completed a one-year postdoc fellowship. For both my Ph.D. and fellowship, I was supervised by Prof. Vincent S. Tseng. Prior to this, I earned my master's in computer science from Yuan Ze University and my bachelor's in computer science from The University of The Gambia. My Ph.D. dissertation is titled A Study on Trend Analysis in High Utility Itemset Mining. My research interests include data mining, machine learning, medical AI, deep learning, generative AI, and data analytics. Currently, my research is focused on the medical field, aligning with my current job position. In this role, I aim to develop medical AI models that can make a positive impact on the healthcare sector.",
         "fname": "Acquah",
         "lname": "Hackman",
@@ -121,6 +121,14 @@
         }
     ],
     "Skills": {
+        "Soft Skills": [
+            "Critical thinking",
+            "Problem-solving",
+            "Collaboration",
+            "Time management",
+            "Good Communication",
+            "Resilient"
+        ],
         "Programming": [
             {
                 "name": "Python",
@@ -200,7 +208,6 @@
                 "Developed deep learning models for the platform.",
                 "Designed and implemented the digital pathology architecture.",
                 "Integrated the solution with the existing hospital information system at Changhua Christian Hospital."
-                
             ],
             "outcome": "The digital pathology platform has saved the hospital millions of NTD, which would otherwise be spent on similar commercial platforms.",
             "challenges": "The primary challenge was managing the workload as a single developer. To address this, we prioritized and implemented key features first. Future improvements and additional features will be addressed as more manpower becomes available."
@@ -233,7 +240,7 @@
                 "Implemented FastAPI for integration into the hospital's health information system.",
                 "Drafted and wrote over 50% of the research manuscript."
             ],
-            "outcome": "The best model's I0U score is 0.8503. We integrated the model into the hospital to improve patient care. Our manuscript was accepted for publication.",
+            "outcome": "The best model's I0U score is 0.8503. We integrated the model into the hospital to improve patient care. Our manuscript was accepted for publication. We have also filed a patent for the methodology",
             "challenges": "One of the main challenges is that the segmentation output has a condition we referred to as broken edges in some cases. To address this problem, we developed an edge-filling algorithm."
         },
         {
@@ -288,9 +295,9 @@
             "contribution": [
                 "Data cleaning and preprocessing.",
                 "Developed strategies for notes summarization",
-                "Responsible for the development of the report generation system."                
+                "Responsible for the development of the report generation system."
             ],
-            "outcome": "AI Powered editor for medical notes writing and summarization.",
+            "outcome": "Selected in the highly contested IHF2024 Finalist. AI Powered editor for medical notes writing and summarization.",
             "challenges": "How do deal with very large medical notes."
         },
         {
@@ -520,21 +527,22 @@
         }
     ],
     "Publications": [
-    {
-        "title": "基於機器學習方法預測醫院之出院量",
-        "authors": "帆薇徐, 英志 林, <b>克曼哈</b>, 天雄 古 and 佩云 王",
-        "type": "Conference",
-        "publisher_name": "The 41st Symposium on Combinatorial Mathematics and Computational Theory (CMCT 2024)",
-        "year": "2024",
-        "role": "Corresponding Author"
-    },{
-        "title": "Automatic Segmentation of Membranous Glottal Gap Area with U-Net-based Architecture",
-        "authors": "<b>Acquah Hackman</b>, Chih-Hua Chen, Andy Wei-Ge Chen, Mu-Kuan Chen",
-        "type": "Journal",
-        "publisher_name": "The Laryngoscope",
-        "year": "2023",
-        "role": "first author"
-    },
+        {
+            "title": "基於機器學習方法預測醫院之出院量",
+            "authors": "帆薇徐, 英志 林, <b>克曼哈</b>, 天雄 古 and 佩云 王",
+            "type": "Conference",
+            "publisher_name": "The 41st Symposium on Combinatorial Mathematics and Computational Theory (CMCT 2024)",
+            "year": "2024",
+            "role": "Corresponding Author"
+        },
+        {
+            "title": "Automatic Segmentation of Membranous Glottal Gap Area with U-Net-based Architecture",
+            "authors": "<b>Acquah Hackman</b>, Chih-Hua Chen, Andy Wei-Ge Chen, Mu-Kuan Chen",
+            "type": "Journal",
+            "publisher_name": "The Laryngoscope",
+            "year": "2023",
+            "role": "first author"
+        },
         {
             "title": "Stable High Utility Itemset Mining",
             "authors": "<b>Acquah Hackman</b>, Yu Huang, Philippe Fournier-Viger, Vincent Tseng",
@@ -641,7 +649,7 @@
             "type": "Professional"
         }
     ],
-    "invited_talks":[
+    "invited_talks": [
         {
             "event": "2024 AI on Clinical Decision Making and Precision Medicine Forum",
             "title": "Medical AI: Application and Forecast",
@@ -649,7 +657,7 @@
             "date": "2024-03-21",
             "time": "09:00 - 12:00",
             "abstract": "",
-            "role":"Keynote 1"
+            "role": "Keynote 1"
         },
         {
             "event": "Healthcare Expo - Taiwan",
@@ -658,7 +666,7 @@
             "date": "2023-12-03",
             "time": "09:00 - 12:00",
             "abstract": "",
-            "role":"Public Speech"
+            "role": "Public Speech"
         },
         {
             "event": "Weekly General Hospital Seminar",
@@ -667,7 +675,7 @@
             "date": "2023-04-07",
             "time": "07:45 - 08:00",
             "abstract": "",
-            "role":"Speech"
+            "role": "Speech"
         },
         {
             "event": "Departmental Archievement Report",
@@ -676,7 +684,7 @@
             "date": "2023-07-12",
             "time": "09:00 - 12:00",
             "abstract": "",
-            "role":"Lecture"
+            "role": "Lecture"
         }
     ]
 }
